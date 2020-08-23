@@ -4,8 +4,250 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David Allen-Jordan</title>
+  <script src="https://kit.fontawesome.com/46911dc7bd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+
+  <header>
+
+    <!-- Navigation bar -->
+    
+    <nav>
+      <ul>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero statement with typeWriter effect, hero image -->
+    
+    <div class="wrapper headerFlex">
+
+      <div class="heroBanner">
+        <h1><span>Hello,</span><span>I am</span><span>David Allen-Jordan</span></h1>
+        <p class="typewriterEffect">A Web Developer</p>
+      </div>
+
+      <div class="heroImageContainer">
+        <div class="heroImage">
+          <img src="./assets/temporary.jpeg" alt="A profile picture of a developer looking for a job.">
+        </div>
+        
+        <div aria-hidden="true" class="imageShadow"></div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- Biography statement, download resume link -->
+
+    <section class="bio" id="bio">
+      <div class="wrapper">
+        
+        <h2>Bio</h2>
+        
+        <h3>This is my bio</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe exercitationem laborum soluta, ut culpa itaque? Fugit modi nemo, cupiditate, obcaecati, nobis iure in beatae sint id omnis repellat nam alias? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum magnam laudantium quaerat quas cupiditate vero eligendi laborum, voluptatem ipsam nobis asperiores! Eaque accusantium quo sequi cumque? Beatae dolorem eos placeat.</p>
+        
+        <button>Download Resume</button>
+        
+      </div>
+    </section>
+
+    <!-- Project section with images, links to code and live sites -->
+
+    <section class="projects" id="projects">
+      <div class="wrapper">
+
+        <h2>Projects</h2>
+
+        <ul>
+
+          <li>
+            <div class="projectContainer">
+
+              <div class="projectImage">
+                <img src="http://via.placeholder.com/300x200" alt="">
+              </div>
+
+              <h4>Hush Note</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa accusamus dolore possimus tempore perspiciatis quasi dicta recusandae animi perferendis.</p>
+              <a href="" >View Raw</a>
+              <a href="" >View Live</a>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="projectContainer">
+
+              <div class="projectImage">
+                <img src="http://via.placeholder.com/300x200" alt="">
+              </div>
+
+              <h4>project2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa accusamus dolore possimus tempore perspiciatis quasi dicta recusandae animi perferendis.</p>
+              <a href="" >View Raw</a>
+              <a href="" >View Live</a>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="projectContainer">
+
+              <div class="projectImage">
+                <img src="http://via.placeholder.com/300x200" alt="">
+              </div>
+
+              <h4>project3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa accusamus dolore possimus tempore perspiciatis quasi dicta recusandae animi perferendis.</p>
+              <a href="" >View Raw</a>
+              <a href="" >View Live</a>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="projectContainer">
+
+              <div class="projectImage">
+                <img src="http://via.placeholder.com/300x200" alt="">
+              </div>
+
+              <h4>project4</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa accusamus dolore possimus tempore perspiciatis quasi dicta recusandae animi perferendis.</p>
+              <a href="" >View Raw</a>
+              <a href="" >View Live</a>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Skill section with icons for all the good stuff I know -->
+
+    <section class="skill">
+      <div class="wrapper">
+
+        <h2>Skills</h2>
+
+        <ul>
+          <li>
+            <i aria-hidden="true" class="fab fa-html5"></i>
+            <p>HTML5</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fab fa-css3-alt"></i>
+            <p>CSS3</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fab fa-js-square"></i>
+            <p>JavaScript</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="devicon-jquery-plain"></i>
+            <p>jQuery</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fab fa-sass"></i>
+            <p>Sass</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fab fa-react"></i>
+            <p>React</p>
+          </li>
+          <li>
+            <img aria-hidden="true" src="assets/firebase.svg" alt="The Firebase logo.">
+            <p>Firebase</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-code-branch"></i>
+            <p>Git/GitHub</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-mobile-alt"></i>
+            <p>Responsive Design</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-universal-access"></i>
+            <p>A11y</p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Contact section, social media links, email form -->
+
+    <section class="contact">
+      <div class="wrapper">
+
+        <h2>Hire Me</h2>
+
+        <ul>
+
+          <li>
+            <h3>Email Me</h3>
+            <a href="mailto:davidallenjordan@gmail.com">davidallenjordan@gmail.com</a>
+          </li>
+
+          <li>
+            <h3>Book a Chat</h3>
+            <a href="">calendly link</a>
+          </li>
+
+          <li>
+            <h3>Follow Me</h3>
+
+              <ul class="socials">
+                <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/david-allen-jordan-3475151b1/"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a aria-label="GitHub" href="https://github.com/davidallenjordan"><i class="fab fa-github"></i></a></li>
+                <li><a aria-label="Twitter" href="https://twitter.com/davidaj416"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+          </li>
+
+        </ul>
+
+        <!-- Email form -->
+
+        <form method="POST" action="http://www.focuspocus.io/magic/davidallenjordan@gmail.com">
+          <legend>Want to get a hold of me? Just fill out the form and I'll get back to you as soon as possible</legend>
+
+          <label class="srOnly" for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Your Name">
+
+          <label class="srOnly" for="email">Your Email</label>
+          <input type="email" id="email">
+
+          <label class="srOnly" for="message">Your Message</label>
+          <textarea name="message" id="message" placeholder="Your Message"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Copyright for me, because I designed and built this!  -->
+
+  <footer>
+    <p>Copyright <i class="far fa-copyright"></i> David Allen-Jordan 2020</p>
+  </footer>
+
 </body>
 </html>

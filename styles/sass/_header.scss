@@ -1,13 +1,12 @@
 header {
   background: #f4f6ff;
-  margin-bottom: 50px;
 }
 
 // Navigation
 nav {
   ul {
     @include flex (row, left,   center);
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 50px;
   }
 
   li {
@@ -53,18 +52,7 @@ header {
 .heroImage {
   margin: 100px 0 80px 0;
   max-width: 400px;
-
-  position: relative;
-}
-
-.imageShadow {
-  width: 120%;
-  height: 120%;
-  background: green;
-
-  position: absolute;
-  top: 0;
-  right: 0;
+  box-shadow: 25px 25px rgba(0, 128, 0, 0.591);
 }
 
 

@@ -1,10 +1,9 @@
 h1,
 h2,
 h3,
-h4,
 p,
 a {
-  font-family: $temp;
+  font-family: $baseFont;
   color: $black;
 }
 
@@ -26,10 +25,41 @@ h1 {
   span:nth-of-type(3) {
     font-size: 4rem;
     background: linear-gradient(to top, rgba(2, 87, 2, 0.413) 35%, transparent 35%);
+    font-family: $heroFont;
   }
 }
 
-header p {
+p {
   font-size: 1.6rem;
+  line-height: 1.2;
 }
+
+// Main
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.25rem;
+  font-family: $titleFont;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+}
+
+// Projects
+.projectContainer p:first-of-type {
+  font-size: 1.4rem;
+}
+
+.projectContainer p:last-of-type {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
 

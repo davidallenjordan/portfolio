@@ -1,12 +1,13 @@
 header {
-  background: #f4f6ff;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e9ede87a), url(../assets/eucalyptusHeader.jpeg) no-repeat center / cover;
 }
 
 // Navigation
 nav {
   ul {
     @include flex (row, left,   center);
-    padding: 20px 0 0 50px;
+    padding: 30px 0 0 50px;
   }
 
   li {
@@ -15,18 +16,60 @@ nav {
 
   a {
     padding: 10px 10px;
+    display: inline-block;
   }
 }
 
-// Hero statement
-.headerFlex {
-  @include flex (row, space-evenly, 0);
-  flex-wrap: wrap;
+// Hover effect
+nav li a:not(.contactLink) {
+  transition: color 0.3s;
+  &:hover,
+  &:focus {
+    color: darken($button, 25%);
+  }
 }
+
+// Nav Contact underline
+nav li:last-of-type a {
+  position: relative;
+
+  &:after {
+    content: '';
+    height: 4px;
+    width: 85px;
+    position: absolute;
+    background: $button;
+    border-radius: 6px;
+    bottom: 4px;
+    left: 8px;
+    transition-property: width, background, bottom, left, right;
+    transition-duration: 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($button, 25%);
+    &:after {
+      width: 100px;
+      background: transparent;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+// End of Navigation
+
+
+// Hero statement
+// .headerFlex {
+//   @include flex (row, space-evenly, 0);
+//   flex-wrap: wrap;
+// }
 
 header {
   h1 {
-    padding: 200px 0 25px 0;
+    padding: 125px 0 25px 0;
   }
 
   span {
@@ -41,6 +84,9 @@ header {
     padding-bottom: 20px;
   }
 
+  p {
+    padding-bottom: 200px;
+  }
 }
 
 .heroBanner,
@@ -50,7 +96,7 @@ header {
 
 // Hero image
 .heroImage {
-  margin: 100px 0 80px 0;
+  margin: 60px 0 80px 0;
   max-width: 400px;
   box-shadow: 25px 25px rgba(0, 128, 0, 0.591);
 }

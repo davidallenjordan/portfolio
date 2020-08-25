@@ -9,17 +9,18 @@
   <link rel="stylesheet" href="./styles/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Russo+One&display=swap" rel="stylesheet">
 <link
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">   rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@300;400;500;700&display=swap"
+  rel="stylesheet">
   <header>
 
     <!-- Navigation bar -->
     
     <nav>
       <ul>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">My Work</a></li>
+        <li><a href="#toolkit">Skills</a></li>
+        <li><a class="contactLink" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -29,12 +30,12 @@
 
       <div class="heroBanner">
         <h1><span>Hello,</span><span>I am</span><span>David Allen-Jordan</span></h1>
-        <p class="typewriterEffect">A Web Developer</p>
+        <p class="typewriterEffect">Web Developer</p>
       </div>
 
-      <div class="heroImage">
+      <!-- <div class="heroImage">
         <img src="./assets/temporary.jpeg" alt="A profile picture of a developer looking for a job.">
-      </div>
+      </div> -->
 
     </div>
 
@@ -44,8 +45,8 @@
 
     <!-- Biography statement, download resume link -->
 
-    <section class="aboutMe" id="AboutMe">
-      <div class="wrapper aboutMeContainer">
+    <section class="about" id="about">
+      <div class="wrapper aboutContainer">
         
         <h2>About Me</h2>
         
@@ -62,7 +63,7 @@
     <section class="projects" id="projects">
       <div class="wrapper">
 
-        <h2>Projects</h2>
+        <h2>My Work</h2>
 
         <ul>
 
@@ -145,12 +146,12 @@
 
     <!-- Skill section with icons for all the good stuff I know -->
 
-    <section class="skill">
+    <section class="toolkit">
       <div class="wrapper">
 
-        <h2>Skills</h2>
+        <h2>My Toolkit</h2>
 
-        <ul>
+        <ul class="toolkitContainer">
           <li>
             <i aria-hidden="true" class="fab fa-html5"></i>
             <p>HTML5</p>
@@ -185,12 +186,28 @@
           </li>
           <li>
             <i aria-hidden="true" class="fas fa-mobile-alt"></i>
-            <p>Responsive Design</p>
+            <p>Responsive</p>
           </li>
           <li>
             <i aria-hidden="true" class="fas fa-universal-access"></i>
             <p>A11y</p>
           </li>
+          <li>
+            <i aria-hidden="true" class="fab fa-sketch"></i>
+            <p>Sketch</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-database"></i>
+            <p>Rest APIs</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-check"></i>
+            <p>Best Practices</p>
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-users"></i>
+            <p>Mob Programming</p>
+          </li>          
 
         </ul>
 
@@ -202,48 +219,56 @@
     <section class="contact">
       <div class="wrapper">
 
-        <h2>Hire Me</h2>
+        <h2>Contact</h2>
 
-        <ul>
+        <div class="contactContainer">
 
-          <li>
-            <h3>Email Me</h3>
-            <a href="mailto:davidallenjordan@gmail.com">davidallenjordan@gmail.com</a>
-          </li>
+          <!-- Links -->
 
-          <li>
-            <h3>Book a Chat</h3>
-            <a href="">calendly link</a>
-          </li>
-
-          <li>
-            <h3>Follow Me</h3>
-
-              <ul class="socials">
-                <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/david-allen-jordan-3475151b1/"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a aria-label="GitHub" href="https://github.com/davidallenjordan"><i class="fab fa-github"></i></a></li>
-                <li><a aria-label="Twitter" href="https://twitter.com/davidaj416"><i class="fab fa-twitter"></i></a></li>
-              </ul>
-          </li>
-
-        </ul>
-
-        <!-- Email form -->
-
-        <form method="POST" action="http://www.focuspocus.io/magic/davidallenjordan@gmail.com">
-          <legend>Want to get a hold of me? Just fill out the form and I'll get back to you as soon as possible</legend>
-
-          <label class="srOnly" for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Your Name">
-
-          <label class="srOnly" for="email">Your Email</label>
-          <input type="email" id="email">
-
-          <label class="srOnly" for="message">Your Message</label>
-          <textarea name="message" id="message" placeholder="Your Message"></textarea>
-
-          <button type="submit">Send</button>
-        </form>
+          <ul class="connections">
+            <li class="contactBox">
+              <a href="mailto:davidallenjordan@gmail.com">
+                <p>Email Me</p>
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+  
+            <li class="contactBox">
+              <a href="">
+                <p>Book a Chat</p>
+                <i class="fas fa-calendar-alt"></i>
+              </a>
+            </li>
+  
+            <li class="follow">
+              <p>Follow</p>
+  
+                <ul class="socials">
+                  <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/david-allen-jordan-3475151b1/"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a aria-label="GitHub" href="https://github.com/davidallenjordan"><i class="fab fa-github"></i></a></li>
+                  <li><a aria-label="Twitter" href="https://twitter.com/davidaj416"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </li>
+          </ul>
+  
+          <!-- Email form -->
+  
+          <form method="POST" action="https://formspree.io/mzbjqlyo">
+            <legend>Want to get a hold of me? Just fill out the form and I'll get back to you as soon as possible</legend>
+  
+            <label class="srOnly" for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+  
+            <label class="srOnly" for="email">Your Email</label>
+            <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
+  
+            <label class="srOnly" for="message">Your Message</label>
+            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+  
+            <button type="submit" value="Send">Send</button>
+          </form>
+  
+        </div>
 
       </div>
     </section>

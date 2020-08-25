@@ -1,0 +1,44 @@
+.toolkit {
+  background: #e7e8e7;
+}
+.toolkitContainer {
+  padding-top: 40px;
+  padding-bottom: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 30px 15px;
+
+  img {
+    width: 72px;
+    margin: 0 auto;
+  }
+
+  i {
+    font-size: 7rem;
+    color: #697469;
+  }
+
+  li {
+    background: #f7f7f7;
+    width: 160px;
+    height: 150px;
+    padding-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #0000003e, -2px 0 2px #00000027;
+  }
+
+  li:last-of-type {
+    i {
+      font-size: 5.5rem;
+    }
+  }
+
+  p {
+    padding-top: 10px;
+  }
+}
+

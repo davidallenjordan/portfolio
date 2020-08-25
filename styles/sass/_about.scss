@@ -1,0 +1,24 @@
+// About Me Section 
+.about {
+  background: #f1f1e8;
+
+  p {
+    padding-bottom: 100px;
+    width: 60%;
+  }
+
+  button {
+    margin-bottom: 60px;
+    width: 310px;
+    align-self: flex-end;
+  }
+
+  h3 {
+    padding-bottom: 20px;
+  }
+}
+
+.aboutContainer {
+  @include flex (column, 0, 0)
+}
+

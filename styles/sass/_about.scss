@@ -1,6 +1,7 @@
 // About Me Section 
 .about {
-  background: #e7e8e7;
+  padding-bottom: 100px;
+  background: $background;
 
   p {
     padding-bottom: 100px;
@@ -15,10 +16,6 @@
   h3 {
     padding-bottom: 20px;
   }
-
-  h2 {
-    padding-bottom: 100px;
-  }
 }
 
 .aboutContainer {
@@ -32,11 +29,14 @@
 
 .bioContainer,
 .profilePic {
-  flex: 1 1 300px;
+  flex: 1 1 350px;
 }
 
 .profilePic {
   max-width: 400px;
-  margin: 0 0 100px 50px;
-
+  margin: 0 0 0 50px;
+  
+  img {
+    box-shadow: 25px 15px $button;
+  }
 }

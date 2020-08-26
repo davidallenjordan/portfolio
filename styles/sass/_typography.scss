@@ -21,16 +21,19 @@ nav li {
 h1 {
   span:nth-of-type(1) {
     font-size: 3.5rem;
+    font-weight: 600;
   }
 
   span:nth-of-type(2) {
     font-size: 5rem;
+    font-weight: 400;
   }
 
   span:nth-of-type(3) {
-    font-size: 6.5rem;
-    background: linear-gradient(to top, rgba(2, 87, 2, 0.413) 35%, transparent 35%);
+    font-size: 7rem;
+    background: linear-gradient(to top, #02570233 35%, transparent 35%);
     font-family: $heroFont;
+    font-weight: 500;
   }
 }
 
@@ -43,14 +46,15 @@ header p {
 // Section Titles
 h2 {
   font-size: 2.75rem;
-  font-weight: 600;
+  font-weight: 300;
 }
 
+// About Me Header
 h3 {
   font-size: 3.5rem;
 }
 
-// About Me Body Text
+// About Me Body
 p {
   font-size: 2.25rem;
   line-height: 1.2;
@@ -60,10 +64,11 @@ p {
 
 // Titles
 h4 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-family: $titleFont;
   font-weight: 700;
   letter-spacing: 1.25px;
+  color: darken($button, 25%);
 }
 
 // Body

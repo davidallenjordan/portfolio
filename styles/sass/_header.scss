@@ -6,7 +6,7 @@ header {
 // Navigation
 nav {
   ul {
-    @include flex (row, left,   center);
+    @include flex (row, left, center);
     padding: 30px 0 0 50px;
   }
 
@@ -60,13 +60,7 @@ nav li:last-of-type a {
 }
 // End of Navigation
 
-
-// Hero statement
-// .headerFlex {
-//   @include flex (row, space-evenly, 0);
-//   flex-wrap: wrap;
-// }
-
+// Introduction
 header {
   h1 {
     padding: 125px 0 25px 0;
@@ -87,18 +81,6 @@ header {
   p {
     padding-bottom: 200px;
   }
-}
-
-.heroBanner,
-.heroImage {
-  flex: 1 1 400px;
-}
-
-// Hero image
-.heroImage {
-  margin: 60px 0 80px 0;
-  max-width: 400px;
-  box-shadow: 25px 25px rgba(0, 128, 0, 0.591);
 }
 
 

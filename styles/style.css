@@ -246,6 +246,11 @@ a {
   text-decoration: none;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -266,8 +271,7 @@ html {
 
 button,
 .projects a {
-  padding: 10px 30px;
-  cursor: pointer;
+  padding: 10px 15px;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   color: #000;
@@ -288,20 +292,35 @@ button:hover, button:focus,
   color: #FFF;
 }
 
+.sectionTitle {
+  margin-bottom: 100px;
+  padding: 20px 0;
+  background: white;
+  text-align: center;
+}
+
 h2 {
-  padding: 30px 0 40px 150px;
+  margin: 0 auto;
+  display: inline-block;
   position: relative;
 }
 
-h2:before {
+h2:before, h2:after {
   content: '';
   width: 80px;
-  height: 4px;
+  height: 2px;
   border-radius: 6px;
   background: #000;
   position: absolute;
-  left: 40px;
-  top: 45px;
+  top: 50%;
+}
+
+h2:before {
+  left: -100px;
+}
+
+h2:after {
+  right: -100px;
 }
 
 h1,
@@ -322,17 +341,20 @@ nav li {
 
 h1 span:nth-of-type(1) {
   font-size: 3.5rem;
+  font-weight: 600;
 }
 
 h1 span:nth-of-type(2) {
   font-size: 5rem;
+  font-weight: 400;
 }
 
 h1 span:nth-of-type(3) {
-  font-size: 6.5rem;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, rgba(2, 87, 2, 0.413)), color-stop(35%, transparent));
-  background: linear-gradient(to top, rgba(2, 87, 2, 0.413) 35%, transparent 35%);
-  font-family: "Manrope", sans-serif;
+  font-size: 7rem;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #02570233), color-stop(35%, transparent));
+  background: linear-gradient(to top, #02570233 35%, transparent 35%);
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
 }
 
 header p {
@@ -341,7 +363,7 @@ header p {
 
 h2 {
   font-size: 2.75rem;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 h3 {
@@ -354,10 +376,11 @@ p {
 }
 
 h4 {
-  font-size: 3.5rem;
-  font-family: "Roboto Slab", serif;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   letter-spacing: 1.25px;
+  color: #3d523a;
 }
 
 .projectContainer p:first-of-type {
@@ -493,22 +516,9 @@ header p {
   padding-bottom: 200px;
 }
 
-.heroBanner,
-.heroImage {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 400px;
-          flex: 1 1 400px;
-}
-
-.heroImage {
-  margin: 60px 0 80px 0;
-  max-width: 400px;
-  -webkit-box-shadow: 25px 25px rgba(0, 128, 0, 0.591);
-          box-shadow: 25px 25px rgba(0, 128, 0, 0.591);
-}
-
 .about {
-  background: #e7e8e7;
+  padding-bottom: 100px;
+  background: #dde4dd;
 }
 
 .about p {
@@ -524,10 +534,6 @@ header p {
 
 .about h3 {
   padding-bottom: 20px;
-}
-
-.about h2 {
-  padding-bottom: 100px;
 }
 
 .aboutContainer {
@@ -555,17 +561,22 @@ header p {
 .bioContainer,
 .profilePic {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
+      -ms-flex: 1 1 350px;
+          flex: 1 1 350px;
 }
 
 .profilePic {
   max-width: 400px;
-  margin: 0 0 100px 50px;
+  margin: 0 0 0 50px;
+}
+
+.profilePic img {
+  -webkit-box-shadow: 25px 15px #779a71;
+          box-shadow: 25px 15px #779a71;
 }
 
 .projectContainer {
-  width: 80%;
+  max-width: 95%;
   background: #fbfffbd3;
   border-radius: 5px;
   display: -webkit-box;
@@ -578,28 +589,28 @@ header p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: 0;
-      -ms-flex-align: 0;
-          align-items: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 50px 0;
+  padding: 50px 50px;
   margin: 50px auto;
 }
 
 .projectImage {
-  margin-right: 50px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 250px;
-          flex: 1 1 250px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  min-width: 400px;
   max-width: 450px;
 }
 
 .projectInfo {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 400px;
-          flex: 1 1 400px;
-  max-width: 40%;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  max-width: 45%;
 }
 
 h4 {
@@ -607,7 +618,7 @@ h4 {
 }
 
 .projects {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffffbb)), url(../assets/fernsProjects.jpeg) no-repeat center/cover;
   background: linear-gradient(to bottom, #ffffffbb), url(../assets/fernsProjects.jpeg) no-repeat center/cover;
 }
@@ -618,6 +629,16 @@ h4 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.projects ul li:nth-of-type(1) .projectImage,
+.projects ul li:nth-of-type(3) .projectImage {
+  margin-left: 50px;
+}
+
+.projects ul li:nth-of-type(2) .projectImage,
+.projects ul li:nth-of-type(4) .projectImage {
+  margin-right: 50px;
 }
 
 .projects ul li:nth-of-type(4) .projectContainer:after {
@@ -634,12 +655,11 @@ h4 {
 }
 
 .toolkit {
-  background: #e7e8e7;
+  background: #dde4dd;
 }
 
 .toolkitContainer {
-  padding-top: 40px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
@@ -897,4 +917,30 @@ footer p {
   padding: 15px;
   background: #bbc6b9;
   text-align: center;
+}
+
+/* Reduced Motion Media Styles */
+@media (prefers-reduced-motion: reduce) {
+  .animation {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@media (max-width: 995px) {
+  .projectContainer {
+    max-width: 600px;
+  }
+  .projectInfo {
+    max-width: 100%;
+    margin-bottom: 75px;
+  }
+  .projects ul li:nth-of-type(1) .projectImage,
+  .projects ul li:nth-of-type(3) .projectImage {
+    margin: 0;
+  }
+  .projects ul li:nth-of-type(2) .projectImage,
+  .projects ul li:nth-of-type(4) .projectImage {
+    margin: 0;
+  }
 }

@@ -518,7 +518,8 @@ header p {
 
 .about {
   padding-bottom: 100px;
-  background: #dde4dd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#779a7128)), url(../assets/handmadepaper.png) repeat;
+  background: linear-gradient(to bottom, #779a7128), url(../assets/handmadepaper.png) repeat;
 }
 
 .about p {
@@ -541,9 +542,9 @@ header p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -566,13 +567,14 @@ header p {
 }
 
 .profilePic {
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 0 0 50px;
 }
 
 .profilePic img {
-  -webkit-box-shadow: 25px 15px #779a71;
-          box-shadow: 25px 15px #779a71;
+  -webkit-box-shadow: 20px 10px #779a71;
+          box-shadow: 20px 10px #779a71;
+  border-radius: 3px;
 }
 
 .projectContainer {
@@ -594,7 +596,7 @@ header p {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 50px 50px;
+  padding: 50px;
   margin: 50px auto;
 }
 
@@ -633,12 +635,12 @@ h4 {
 
 .projects ul li:nth-of-type(1) .projectImage,
 .projects ul li:nth-of-type(3) .projectImage {
-  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .projects ul li:nth-of-type(2) .projectImage,
 .projects ul li:nth-of-type(4) .projectImage {
-  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .projects ul li:nth-of-type(4) .projectContainer:after {
@@ -655,7 +657,8 @@ h4 {
 }
 
 .toolkit {
-  background: #dde4dd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#779a7128)), url(../assets/handmadepaper.png) repeat;
+  background: linear-gradient(to bottom, #779a7128), url(../assets/handmadepaper.png) repeat;
 }
 
 .toolkitContainer {
@@ -712,7 +715,7 @@ h4 {
 .contactContainer {
   background: #ffffffd2;
   border-radius: 5px;
-  padding: 50px 0;
+  padding: 50px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -728,10 +731,26 @@ h4 {
           align-items: center;
 }
 
-.contactContainer .connections {
+.connections {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin: 47px 100px 0 0;
+  margin: 57px 100px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+}
+
+.connectionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,6 +768,7 @@ h4 {
 
 .contactBox {
   margin: 0 auto 20px auto;
+  display: inline-block;
 }
 
 .contactBox a {
@@ -868,7 +888,6 @@ h4 {
 }
 
 form {
-  min-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,7 +923,7 @@ form textarea {
 }
 
 form legend {
-  width: 500px;
+  max-width: 500px;
   text-align: center;
 }
 
@@ -919,7 +938,6 @@ footer p {
   text-align: center;
 }
 
-/* Reduced Motion Media Styles */
 @media (prefers-reduced-motion: reduce) {
   .animation {
     -webkit-animation: none;
@@ -928,12 +946,18 @@ footer p {
 }
 
 @media (max-width: 995px) {
+  .about p {
+    padding-bottom: 50px;
+  }
   .projectContainer {
-    max-width: 600px;
+    max-width: 500px;
+    padding: 40px 20px;
   }
   .projectInfo {
-    max-width: 100%;
-    margin-bottom: 75px;
+    max-width: 80%;
+  }
+  .projectImage {
+    max-width: 400px;
   }
   .projects ul li:nth-of-type(1) .projectImage,
   .projects ul li:nth-of-type(3) .projectImage {
@@ -942,5 +966,106 @@ footer p {
   .projects ul li:nth-of-type(2) .projectImage,
   .projects ul li:nth-of-type(4) .projectImage {
     margin: 0;
+  }
+  .connections {
+    margin: 79px 25px 0 0;
+  }
+  form,
+  legend {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 850px) {
+  .aboutContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .profilePic {
+    padding-bottom: 50px;
+  }
+  .contact {
+    background-size: cover;
+  }
+  .contactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .connections {
+    margin: 0;
+    padding: 25px 0 75px 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .connectionsContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contactBox:first-of-type {
+    margin-right: 10px;
+  }
+  .contactBox:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+  form,
+  legend {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 715px) {
+  h1 span:nth-of-type(1) {
+    font-size: 2.5rem;
+  }
+  h1 span:nth-of-type(2) {
+    font-size: 4rem;
+  }
+  h1 span:nth-of-type(3) {
+    font-size: 5rem;
+  }
+  header p {
+    font-size: 2.5rem;
+  }
+  .toolkitContainer {
+    -ms-grid-columns: (minmax(130px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px 0px;
+  }
+  .toolkitContainer li {
+    width: 125px;
+    height: 125px;
+  }
+  .toolkitContainer i {
+    font-size: 5rem;
+  }
+  .toolkitContainer .toolkitContainer li:last-of-type i {
+    font-size: 4rem;
+  }
+  .toolkitContainer img {
+    width: 50px;
+  }
+  .toolkit ul p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 515px) {
+  h1 span:nth-of-type(1) {
+    font-size: 1.8rem;
+  }
+  h1 span:nth-of-type(2) {
+    font-size: 2.5rem;
+  }
+  h1 span:nth-of-type(3) {
+    font-size: 3.1rem;
+  }
+  header p {
+    font-size: 2rem;
   }
 }

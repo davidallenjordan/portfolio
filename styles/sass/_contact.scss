@@ -6,26 +6,32 @@
 .contactContainer {
   background: #ffffffd2;
   border-radius: 5px;
-  padding: 50px 0;
+  padding: 50px 50px;
   @include flex (row, center, center);
+}
 
-  .connections {
-    align-self: flex-start;
-    margin: 47px 100px 0 0;
-    @include flex (column, 0, 0);
-  }
+.connections {
+  align-self: flex-start;
+  margin: 57px 100px 0 0;
+  @include flex (column, 0, 0);
+}
+
+.connectionsContainer {
+  // text-align: center;
+  @include flex (column, 0, 0);
 }
 
 // Email and Calendly Links
 .contactBox {
   margin: 0 auto 20px auto;
+  display: inline-block;
   
   a {
     @include flex (row, 0, 0);
     border: 2px solid $black;
     border-radius: 5px;
     padding: 15px 20px;
-
+    
     p {
       padding-right: 10px;
       color: inherit;
@@ -115,7 +121,6 @@
 
 // Form
 form {
-  min-width: 500px;
   @include flex (column, 0, 0);
 
   legend {
@@ -138,7 +143,7 @@ form {
   }
 
   legend {
-    width: 500px;
+    max-width: 500px;
     text-align: center;
   }
 

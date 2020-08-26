@@ -5,7 +5,7 @@
   border-radius: 5px;
   @include flex (row, center, center);
   flex-wrap: wrap;
-  padding: 50px 50px;
+  padding: 50px;
   margin: 50px auto;
 }
 
@@ -38,12 +38,12 @@ h4 {
 
   ul li:nth-of-type(1) .projectImage,
   ul li:nth-of-type(3) .projectImage {
-    margin-left: 50px;
+    margin-right: 50px;
   }
 
   ul li:nth-of-type(2) .projectImage,
   ul li:nth-of-type(4) .projectImage {
-    margin-right: 50px;
+    margin-left: 50px;
   }
 
 

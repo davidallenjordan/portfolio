@@ -5,7 +5,7 @@
   }
 }
   
-  // Medium / Small Screens
+  // Medium / Tablet Screens ------>
   @media (max-width: 995px) {
     // About me -->
   
@@ -50,6 +50,7 @@
   }
 }
 
+// Smaller Screens / Tablets ------>
 @media (max-width: 850px) {
   // About Me -->
   
@@ -59,9 +60,21 @@
 
   .profilePic {
     padding-bottom: 50px;
+    min-width: 450px;
+    margin: 0;
+  }
+
+  // Toggle Mobile / Desktop Images
+  .mobileImage {
+    display: block;
+  }
+
+  .desktopImage {
+    display: none;
   }
 
   // Contact -->
+
   .contact {
     background-size: cover;
   }
@@ -93,8 +106,31 @@
     max-width: 500px;
   }
 }
-
+// Small Screens ------>
 @media (max-width: 715px) {
+  // Global -->
+  // Section Titles
+  .sectionTitle {
+    padding: 10px 0;
+  }
+  h2 {
+    font-weight: 200;
+    
+    &:before,
+    &:after {
+      width: 45px;
+      height: 1px;
+    }
+    
+    &:after {
+      right: -60px;
+    }
+    
+    &:before {
+      left: -60px;
+    }
+  }
+
   // Header -->
 
   h1 {
@@ -110,9 +146,56 @@
       font-size: 5rem;
     }
   }
+  
+  header {
+    height: auto;
 
-  header p {
-    font-size: 2.5rem;
+    h1 {
+      padding-top: 50px;
+    }
+    
+    p {
+      font-size: 2.5rem;
+      padding-bottom: 150px;
+    }
+  }
+
+  // About Me -->
+
+  .about {
+    h3 {
+      font-size: 3rem;
+    }
+
+    p {
+    font-size: 2rem;
+    }
+  }
+
+  .profilePic {
+    min-width: 0;
+    max-width: 450px;
+    padding: 0 20px 50px 0;
+  }
+
+  // Projects -->
+
+  .projectContainer {
+    max-width: 400px;
+  }
+
+  .projectImage,
+  .projectInfo {
+    min-width: 0;
+    max-width: 300px;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  .projectContainer p:first-of-type {
+    font-size: 1.8rem;
   }
 
   // Toolkit / Skills -->
@@ -144,7 +227,21 @@
   }
 }
 
+// Mobile / Small Tablets ------>
 @media (max-width: 515px) {
+  // Global -->
+
+  .sectionTitle {
+    margin-bottom: 50px;
+  }
+
+  // Header -->
+
+  // Temp ----------------------------------------------->>>
+  nav {
+    display: none;
+  }
+
   h1 {
     span:nth-of-type(1) {
       font-size: 1.8rem;
@@ -162,5 +259,162 @@
   header p {
     font-size: 2rem;
   }
+
+  // About Me -->
+
+  .about {
+    padding-bottom: 50px;
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+
+    a {
+      width: 226px;
+    }
+  }
+
+  .profilePic {
+    max-width: 350px;
+  }
+
+  // Projects -->
+
+  .projects {
+    background: lighten($button, 40%);
+
+    // Project Buttons
+    a:first-of-type {
+      margin: 0 0 5px 0;
+    }
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .projectContainer {
+    background: #fbfffb;
+    padding: 20px 20px;
+    margin: 25px auto;
+  }
   
+  .projects ul li:last-of-type .projectContainer {
+    margin: 0 auto;
+  }
+
+  .projectImage,
+  .projectInfo {
+    min-width: 0;
+    max-width: 300px;
+  }
+
+  // Toolkit -->
+
+  .toolkitContainer {
+    grid-template-columns: auto;
+    gap: 10px 0;
+    padding-bottom: 50px;
+
+    img {
+      width: 35px;
+      margin: 0;
+    }
+
+    li {
+      height: 100%;
+      width: 100%;
+      padding: 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i {
+      font-size: 3rem;
+    }
+    
+    li:last-of-type i {
+      font-size: 3rem;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  }
+
+  // Contact -->
+
+  .contact {
+    padding-bottom: 50px;
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .follow {
+    flex-direction: column;
+
+    p {
+      padding-bottom: 5px;
+    }
+  }
+
+  .socials a {
+    display: block;
+    // padding: 10px 15px;
+    // font-size: 3rem;
+  }
+
+  .contactContainer {
+    padding: 25px 10px;
+  }
+
+  .connections {
+    padding: 0 0 50px 0;
+  }
+
+  .connectionsContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactBox {
+    margin: 0;
+  }
+
+  .contactBox:first-of-type {
+    margin: 0 0 5px 0;
+  }
+
+  legend {
+    font-size: 1.6rem;
+  }
+
+  // Mobile Button Transitions
+  button,
+  .projects a,
+  .about a {
+    display: block;
+    background: $white;
+    transition-property: border, color, background;
+    transition-duration: 0.3s;
+    
+    &:hover,
+    &:focus {
+      border: 2px solid $button;
+      color: $white;
+      background: $button;
+    }
+  }
+  
+
+
 }
+
+

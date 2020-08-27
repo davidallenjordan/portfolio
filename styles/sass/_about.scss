@@ -7,7 +7,7 @@
     padding-bottom: 100px;
   }
 
-  button {
+  a {
     width: 310px;
     height: 50px;
     align-self: flex-end;
@@ -30,6 +30,11 @@
 .bioContainer,
 .profilePic {
   flex: 1 1 350px;
+}
+
+// Hidden Image for Mobile
+.mobileImage {
+  display: none;
 }
 
 .profilePic {

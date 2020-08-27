@@ -270,7 +270,8 @@ html {
 }
 
 button,
-.projects a {
+.projects a,
+.about a {
   padding: 10px 15px;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
@@ -286,7 +287,9 @@ button,
 
 button:hover, button:focus,
 .projects a:hover,
-.projects a:focus {
+.projects a:focus,
+.about a:hover,
+.about a:focus {
   background-position: left bottom;
   border: 2px solid #779a71;
   color: #FFF;
@@ -526,7 +529,7 @@ header p {
   padding-bottom: 100px;
 }
 
-.about button {
+.about a {
   width: 310px;
   height: 50px;
   -ms-flex-item-align: end;
@@ -564,6 +567,10 @@ header p {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 350px;
           flex: 1 1 350px;
+}
+
+.mobileImage {
+  display: none;
 }
 
 .profilePic {
@@ -984,6 +991,14 @@ footer p {
   }
   .profilePic {
     padding-bottom: 50px;
+    min-width: 450px;
+    margin: 0;
+  }
+  .mobileImage {
+    display: block;
+  }
+  .desktopImage {
+    display: none;
   }
   .contact {
     background-size: cover;
@@ -1020,6 +1035,22 @@ footer p {
 }
 
 @media (max-width: 715px) {
+  .sectionTitle {
+    padding: 10px 0;
+  }
+  h2 {
+    font-weight: 200;
+  }
+  h2:before, h2:after {
+    width: 45px;
+    height: 1px;
+  }
+  h2:after {
+    right: -60px;
+  }
+  h2:before {
+    left: -60px;
+  }
   h1 span:nth-of-type(1) {
     font-size: 2.5rem;
   }
@@ -1029,8 +1060,40 @@ footer p {
   h1 span:nth-of-type(3) {
     font-size: 5rem;
   }
+  header {
+    height: auto;
+  }
+  header h1 {
+    padding-top: 50px;
+  }
   header p {
     font-size: 2.5rem;
+    padding-bottom: 150px;
+  }
+  .about h3 {
+    font-size: 3rem;
+  }
+  .about p {
+    font-size: 2rem;
+  }
+  .profilePic {
+    min-width: 0;
+    max-width: 450px;
+    padding: 0 20px 50px 0;
+  }
+  .projectContainer {
+    max-width: 400px;
+  }
+  .projectImage,
+  .projectInfo {
+    min-width: 0;
+    max-width: 300px;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  .projectContainer p:first-of-type {
+    font-size: 1.8rem;
   }
   .toolkitContainer {
     -ms-grid-columns: (minmax(130px, 1fr))[auto-fit];
@@ -1056,6 +1119,12 @@ footer p {
 }
 
 @media (max-width: 515px) {
+  .sectionTitle {
+    margin-bottom: 50px;
+  }
+  nav {
+    display: none;
+  }
   h1 span:nth-of-type(1) {
     font-size: 1.8rem;
   }
@@ -1067,5 +1136,135 @@ footer p {
   }
   header p {
     font-size: 2rem;
+  }
+  .about {
+    padding-bottom: 50px;
+  }
+  .about h3 {
+    font-size: 2.5rem;
+  }
+  .about p {
+    font-size: 1.8rem;
+  }
+  .about a {
+    width: 226px;
+  }
+  .profilePic {
+    max-width: 350px;
+  }
+  .projects {
+    background: #e9efe8;
+  }
+  .projects a:first-of-type {
+    margin: 0 0 5px 0;
+  }
+  .projects a {
+    text-align: center;
+  }
+  .projectContainer {
+    background: #fbfffb;
+    padding: 20px 20px;
+    margin: 25px auto;
+  }
+  .projects ul li:last-of-type .projectContainer {
+    margin: 0 auto;
+  }
+  .projectImage,
+  .projectInfo {
+    min-width: 0;
+    max-width: 300px;
+  }
+  .toolkitContainer {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    gap: 10px 0;
+    padding-bottom: 50px;
+  }
+  .toolkitContainer img {
+    width: 35px;
+    margin: 0;
+  }
+  .toolkitContainer li {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .toolkitContainer i {
+    font-size: 3rem;
+  }
+  .toolkitContainer li:last-of-type i {
+    font-size: 3rem;
+  }
+  .toolkitContainer p {
+    padding-left: 10px;
+  }
+  .contact {
+    padding-bottom: 50px;
+    background-position: center;
+    background-size: cover;
+  }
+  .follow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .follow p {
+    padding-bottom: 5px;
+  }
+  .socials a {
+    display: block;
+  }
+  .contactContainer {
+    padding: 25px 10px;
+  }
+  .connections {
+    padding: 0 0 50px 0;
+  }
+  .connectionsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactBox {
+    margin: 0;
+  }
+  .contactBox:first-of-type {
+    margin: 0 0 5px 0;
+  }
+  legend {
+    font-size: 1.6rem;
+  }
+  button,
+  .projects a,
+  .about a {
+    display: block;
+    background: #FFF;
+    -webkit-transition-property: border, color, background;
+    transition-property: border, color, background;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+  }
+  button:hover, button:focus,
+  .projects a:hover,
+  .projects a:focus,
+  .about a:hover,
+  .about a:focus {
+    border: 2px solid #779a71;
+    color: #FFF;
+    background: #779a71;
   }
 }

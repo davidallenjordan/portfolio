@@ -370,12 +370,13 @@ h2 {
 }
 
 h3 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 p {
   font-size: 2.25rem;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 h4 {
@@ -526,6 +527,10 @@ header p {
 }
 
 .about p {
+  padding-bottom: 20px;
+}
+
+.about p:nth-of-type(3) {
   padding-bottom: 100px;
 }
 
@@ -711,6 +716,10 @@ h4 {
 
 .toolkitContainer p {
   padding-top: 10px;
+}
+
+.mobileToolkit {
+  display: none;
 }
 
 .contact {
@@ -953,9 +962,6 @@ footer p {
 }
 
 @media (max-width: 995px) {
-  .about p {
-    padding-bottom: 50px;
-  }
   .projectContainer {
     max-width: 500px;
     padding: 40px 20px;
@@ -1071,7 +1077,7 @@ footer p {
     padding-bottom: 150px;
   }
   .about h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .about p {
     font-size: 2rem;
@@ -1104,6 +1110,9 @@ footer p {
     width: 125px;
     height: 125px;
   }
+  .toolkitContainer li:last-child {
+    padding: 10px 5px;
+  }
   .toolkitContainer i {
     font-size: 5rem;
   }
@@ -1116,9 +1125,16 @@ footer p {
   .toolkit ul p {
     font-size: 1.6rem;
   }
+  .socials a {
+    font-size: 3rem;
+    padding: 10px 15px;
+  }
+  .socials li:last-child a {
+    margin: 0;
+  }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 526px) {
   .sectionTitle {
     margin-bottom: 50px;
   }
@@ -1141,13 +1157,16 @@ footer p {
     padding-bottom: 50px;
   }
   .about h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .about p {
     font-size: 1.8rem;
   }
   .about a {
     width: 226px;
+  }
+  .about p:nth-of-type(3) {
+    padding-bottom: 50px;
   }
   .profilePic {
     max-width: 350px;
@@ -1175,9 +1194,9 @@ footer p {
     max-width: 300px;
   }
   .toolkitContainer {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    gap: 10px 0;
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px 10px;
     padding-bottom: 50px;
   }
   .toolkitContainer img {
@@ -1205,7 +1224,13 @@ footer p {
     font-size: 3rem;
   }
   .toolkitContainer p {
-    padding-left: 10px;
+    padding: 0 0 0 10px;
+  }
+  .desktopToolkit {
+    display: none;
+  }
+  .mobileToolkit {
+    display: block;
   }
   .contact {
     padding-bottom: 50px;

@@ -460,6 +460,10 @@ nav a {
   display: inline-block;
 }
 
+.mobileNav {
+  display: none;
+}
+
 nav li a:not(.contactLink) {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -1070,11 +1074,11 @@ footer p {
     height: auto;
   }
   header h1 {
-    padding-top: 50px;
+    padding-top: 70px;
   }
   header p {
     font-size: 2.5rem;
-    padding-bottom: 150px;
+    padding-bottom: 170px;
   }
   .about h3 {
     font-size: 2.5rem;
@@ -1138,8 +1142,28 @@ footer p {
   .sectionTitle {
     margin-bottom: 50px;
   }
-  nav {
-    display: none;
+  .mobileNav {
+    display: block;
+    font-size: 2.5rem;
+  }
+  nav a:not(.mobileNav) {
+    padding: 5px 10px;
+  }
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0;
+  }
+  nav ul li:last-child {
+    margin-bottom: -130px;
+  }
+  .toggleDropDown {
+    visibility: hidden;
   }
   h1 span:nth-of-type(1) {
     font-size: 1.8rem;
@@ -1172,7 +1196,7 @@ footer p {
     max-width: 350px;
   }
   .projects {
-    background: #e9efe8;
+    background: #cddaca;
   }
   .projects a:first-of-type {
     margin: 0 0 5px 0;

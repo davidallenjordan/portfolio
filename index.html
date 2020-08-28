@@ -12,7 +12,11 @@
   rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap"
   rel="stylesheet">
-  <link rel="icon" href="./assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+<link rel="manifest" href="./assets/site.webmanifest">
+<link rel="icon" href="https://www.davidallenjordan.com/favicon.ico?v=2" />
 </head>
 
   <header>
@@ -21,10 +25,11 @@
     
     <nav>
       <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">My Work</a></li>
-        <li><a href="#toolkit">Skills</a></li>
-        <li><a class="contactLink" href="#contact">Contact</a></li>
+        <li><a class="mobileNav" href=#><i class="fas fa-bars"></i></a></li>
+        <li><a class="toggleDropDown mobileDropDown" href="#about">About Me</a></li>
+        <li><a class="toggleDropDown mobileDropDown" href="#projects">My Work</a></li>
+        <li><a class="toggleDropDown mobileDropDown" href="#toolkit">Skills</a></li>
+        <li><a class="toggleDropDown mobileDropDown" class="contactLink" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -64,7 +69,7 @@
           </div>
 
 
-          <div class="bioContainer">
+          <div class="bioContainer animationElement">
             <h3>Seeking a front-end web development position in Toronto or virtually within Canada.</h3>
             
             <p>Coming from a background in horticulture I have a strong knack for patterns and systems as well as creating harmonious
@@ -321,5 +326,7 @@
     <p>Copyright <i class="far fa-copyright"></i> David Allen-Jordan 2020</p>
   </footer>
 
+<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+<script src="./script.js"></script>
 </body>
 </html>

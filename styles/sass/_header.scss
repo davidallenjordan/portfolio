@@ -20,6 +20,10 @@ nav {
   }
 }
 
+.mobileNav {
+  display: none;
+}
+
 // Hover effect
 nav li a:not(.contactLink) {
   transition: color 0.3s;

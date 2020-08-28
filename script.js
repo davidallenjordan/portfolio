@@ -7,3 +7,25 @@
 
 // Stretch Goals:
 // TypeWriter Effect for Web Developer
+
+
+
+// mobile nav.
+// on click of li with <a>, reveal (slide?) other li elements
+
+// App Name Space
+const app = () => {}
+
+
+// Mobile Nav Menu
+app.mobileNav = () => {
+  $('.mobileNav').on('click', () => {
+    $('.mobileDropDown').toggleClass('toggleDropDown');
+  })
+}
+
+// on scroll down, slide in element from left
+
+$(document).ready( () => {
+  app.mobileNav();
+})

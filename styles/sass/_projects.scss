@@ -28,7 +28,7 @@ h4 {
 
 .projects {
   padding-bottom: 50px;
-  background: linear-gradient(to bottom, #ffffffbb), url(../assets/fernsProjects.jpeg) no-repeat center / cover;
+  background: lighten($button, 35%);
 
   // Reversing every other project layout
   ul li:nth-of-type(2) .projectContainer,

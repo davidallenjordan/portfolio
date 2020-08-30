@@ -637,8 +637,7 @@ h4 {
 
 .projects {
   padding-bottom: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffffbb)), url(../assets/fernsProjects.jpeg) no-repeat center/cover;
-  background: linear-gradient(to bottom, #ffffffbb), url(../assets/fernsProjects.jpeg) no-repeat center/cover;
+  background: #dbe4d9;
 }
 
 .projects ul li:nth-of-type(2) .projectContainer,
@@ -956,6 +955,42 @@ footer p {
   padding: 15px;
   background: #bbc6b9;
   text-align: center;
+}
+
+.bioContainer {
+  -webkit-transition-property: left opacity;
+  transition-property: left opacity;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.hideBio {
+  position: relative;
+  left: -300px;
+  opacity: 0;
+}
+
+.aboutMeSlideIn {
+  left: 0;
+  opacity: 1;
+}
+
+.toolkitContainer {
+  -webkit-transition-property: bottom opacity;
+  transition-property: bottom opacity;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.hideToolkit {
+  position: relative;
+  bottom: -300px;
+  opacity: 0;
+}
+
+.toolkitSlideUp {
+  bottom: 0;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

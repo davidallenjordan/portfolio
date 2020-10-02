@@ -1,21 +1,17 @@
-h1,
-h2,
-h3,
-p,
 a,
-textarea,
-input,
-legend {
-  font-family: $baseFont;
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: $anotherNewFont;
   color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // Header ------>
-
-// Navigation Bar
-nav li {
-  font-size: 2rem;
-}
 
 // Hero statement
 h1 {
@@ -31,11 +27,21 @@ h1 {
 
   span:nth-of-type(3) {
     font-size: 7rem;
+    font-family: $anotherNewFont;
+
     background: linear-gradient(to top, #02570233 35%, transparent 35%);
-    font-family: $heroFont;
-    font-weight: 500;
   }
 }
+
+span:nth-of-type(3),
+h3,
+.connections p,
+legend {
+  font-weight: 500;
+}
+
+
+
 
 header p {
   font-size: 3rem;
@@ -45,14 +51,14 @@ header p {
 
 // Section Titles
 h2 {
-  font-size: 2.75rem;
-  font-weight: 300;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: $testFont;
 }
 
 // About Me Header
 h3 {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 3.5rem;
 }
 
 // About Me Body
@@ -66,14 +72,20 @@ p {
 // Titles
 h4 {
   font-size: 4rem;
-  font-family: $titleFont;
+  font-family: $anotherNewFont;
   font-weight: 700;
   letter-spacing: 1.25px;
   color: darken($button, 25%);
 }
 
-// Body
-.projectContainer p:first-of-type {
+// Header Nav, Body, Toolkit, Contact, Form, Footer
+nav li,
+.projectContainer p:first-of-type,
+.toolkit ul p,
+.connections p,
+.connections a,
+legend,
+footer p {
   font-size: 2rem;
 }
 
@@ -83,22 +95,11 @@ h4 {
   font-weight: 600;
 }
 
-// Toolkit -->
-
-.toolkit ul p {
-  font-size: 2rem;
-}
-
 // Contact -->
 
 .connections {
-  p {
-    font-size: 2rem;
-    font-weight: 500;
-  }
 
   a {
-    font-size: 2rem;
     font-weight: 300;
   }
 }
@@ -111,17 +112,4 @@ input,
 textarea {
   font-size: 1.6rem;
 }
-
-legend {
-  font-weight: 500;
-  font-size: 2rem;
-}
-
-// Footer ------>
-
-footer p {
-  font-size: 2rem;
-}
-
-
 

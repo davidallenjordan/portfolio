@@ -1,35 +1,4 @@
-// Projects 
-.projectContainer {
-  max-width: 95%;
-  background: #fbfffbd3;
-  border-radius: 5px;
-  @include flex (row, center, center);
-  flex-wrap: wrap;
-  padding: 50px;
-  margin: 50px auto;
-}
-
-// Images
-.projectImage {
-  flex: 1 1 300px;
-  min-width: 400px;
-  max-width: 450px;
-}
-
-// Copy
-.projectInfo {
-  flex: 1 1 300px;
-  max-width: 45%;
-}
-
-h4 {
-  padding-bottom: 5px;
-}
-
 .projects {
-  padding-bottom: 50px;
-  background: lighten($button, 35%);
-
   // Reversing every other project layout
   ul li:nth-of-type(2) .projectContainer,
   ul li:nth-of-type(4) .projectContainer {
@@ -62,3 +31,39 @@ h4 {
     margin-right: 5px;
   }
 }
+
+// Projects 
+.projectContainer {
+  max-width: 95%;
+  padding: 50px;
+  margin: 0 auto 50px auto;
+
+  background: lighten(#f0ece3, 25%);
+  border-radius: 5px;
+
+  @include flex (row, center, center);
+  flex-wrap: wrap;
+}
+
+.projects ul li:last-of-type .projectContainer {
+  margin: 0 auto;
+}
+
+// Images
+.projectImage {
+  min-width: 400px;
+  max-width: 450px;
+
+  flex: 1 1 300px;
+}
+
+// Copy
+.projectInfo {
+  max-width: 45%;
+  flex: 1 1 300px;
+}
+
+h4 {
+  padding-bottom: 5px;
+}
+

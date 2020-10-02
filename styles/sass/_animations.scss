@@ -1,33 +1,39 @@
-// About Me slide in
+// About Me - slide in
 .bioContainer {
   transition-property: left opacity;
   transition-duration: 1s;
 }
 
 .hideBio {
-  position: relative;
   left: -300px;
-  opacity: 0;
 }
 
 .aboutMeSlideIn {
   left: 0;
+}
+
+// About Me + Toolkit Styles 
+.hideBio,
+.hideToolkit {
+  position: relative;
+  opacity: 0;
+}
+
+.aboutMeSlideIn,
+.toolkitSlideUp {
   opacity: 1;
 }
 
-// Toolkit Slide Up
+// Toolkit - Slide Up
 .toolkitContainer {
   transition-property: bottom opacity;
   transition-duration: 1s;
 }
 
 .hideToolkit {
-  position: relative;
   bottom: -300px;
-  opacity: 0;
 }
 
 .toolkitSlideUp {
   bottom: 0;
-  opacity: 1;
 }

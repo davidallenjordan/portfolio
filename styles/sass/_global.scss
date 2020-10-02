@@ -6,6 +6,10 @@ body, h1, h2, h3, h4, h5, p, ul {
   font-weight: normal;
 }
 
+body {
+  background: #d2e2e8;
+}
+
 ul {
   list-style: none;
 }
@@ -50,14 +54,17 @@ html {
 button,
 .projects a,
 .about a {
+  display: inline-block;
   padding: 10px 15px;
+
   font-size: 2rem;
-  font-family: $baseFont;
+
   color: $black;
   background: linear-gradient(to right, $button 50%, $white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   border: 2px solid $black;
+
   transition: all 0.5s ease;
 
   &:hover,
@@ -69,34 +76,6 @@ button,
 }
 
 // Section Headings 
-.sectionTitle {
-  margin-bottom: 100px;
-  padding: 20px 0;
-  background: white;
-  text-align: center;
-}
-
 h2 {
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  
-  &:before,
-  &:after {
-    content: '';
-    width: 80px;
-    height: 2px;
-    border-radius: 6px;
-    background: $black;
-    position: absolute;
-    top: 50%;
-  }
-  
-  &:before {
-    left: -100px;
-  }
-
-  &:after {
-    right: -100px;
-  }
+  padding: 100px 0;
 }

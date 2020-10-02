@@ -1,8 +1,4 @@
-.toolkit {
-  background: linear-gradient(to bottom, #779a7128), url(../assets/handmadepaper.png) repeat;
-}
 .toolkitContainer {
-  padding-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-items: center;
@@ -21,13 +17,15 @@
   }
 
   li {
-    background: #f7f7f7;
     width: 160px;
     height: 150px;
     padding-top: 20px;
-    text-align: center;
+
+    background: #f7f7f7;
     border-radius: 5px;
     box-shadow: 5px 5px 5px #0000003e, -2px 0 2px #00000027;
+    
+    text-align: center;
   }
 
   li:last-of-type {

@@ -1,13 +1,13 @@
 header {
   height: 100vh;
-  background: linear-gradient(to bottom, #e9ede87a), url(../assets/eucalyptusHeader.jpeg) no-repeat center / cover;
+  background: linear-gradient(to bottom, #d2e2e81d 60%, #d2e2e8d2, #d2e2e8), radial-gradient(#d2e2e8cb,  #d2e2e800), radial-gradient(#d2e2e812 20%, #d2e2e8), url(../assets/eucalyptusHeader.jpeg) no-repeat center / cover;
 }
 
 // Navigation
 nav {
   ul {
-    @include flex (row, left, center);
     padding: 30px 0 0 50px;
+    @include flex (row, left, center);
   }
 
   li {
@@ -27,6 +27,7 @@ nav {
 // Hover effect
 nav li a:not(.contactLink) {
   transition: color 0.3s;
+
   &:hover,
   &:focus {
     color: darken($button, 25%);
@@ -41,11 +42,14 @@ nav li:last-of-type a {
     content: '';
     height: 4px;
     width: 85px;
-    position: absolute;
+
     background: $button;
     border-radius: 6px;
+
+    position: absolute;
     bottom: 4px;
     left: 8px;
+
     transition-property: width, background, bottom, left, right;
     transition-duration: 0.3s;
   }
@@ -53,9 +57,11 @@ nav li:last-of-type a {
   &:hover,
   &:focus {
     color: darken($button, 25%);
+
     &:after {
       width: 100px;
       background: transparent;
+      
       bottom: -6px;
       left: 0;
       right: 0;
@@ -86,5 +92,10 @@ header {
     padding-bottom: 200px;
   }
 }
+
+// Type Writer Effect
+// .heroBanner p {
+
+// }
 
 

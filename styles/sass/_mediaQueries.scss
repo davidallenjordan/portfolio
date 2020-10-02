@@ -55,8 +55,8 @@
   }
 
   .profilePic {
-    padding-bottom: 50px;
     min-width: 450px;
+    padding-bottom: 50px;
     margin: 0;
   }
 
@@ -80,8 +80,9 @@
   }
 
   .connections {
-    margin: 0;
     padding: 25px 0 75px 0;
+    margin: 0;
+
     align-self: center;
   }
 
@@ -151,8 +152,8 @@
     }
     
     p {
-      font-size: 2.5rem;
       padding-bottom: 170px;
+      font-size: 2.5rem;
     }
   }
 
@@ -164,7 +165,7 @@
     }
 
     p {
-    font-size: 2rem;
+      font-size: 2rem;
     }
   }
 
@@ -260,9 +261,10 @@
     }
 
     ul {
+      padding: 0;
+
       flex-direction: column;
       align-items: flex-end;
-      padding: 0;
     }
   }
 
@@ -336,9 +338,10 @@
   }
 
   .projectContainer {
-    background: #fbfffb;
     padding: 20px 20px;
     margin: 25px auto;
+
+    background: #fbfffb;
   }
   
   .projects ul li:last-of-type .projectContainer {
@@ -354,9 +357,10 @@
   // Toolkit -->
 
   .toolkitContainer {
+    padding-bottom: 50px;
+
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px 10px;
-    padding-bottom: 50px;
 
     img {
       width: 35px;
@@ -447,6 +451,7 @@
   .about a {
     display: block;
     background: $white;
+
     transition-property: border, color, background;
     transition-duration: 0.3s;
     
@@ -457,8 +462,6 @@
       background: $button;
     }
   }
-  
-
 
 }
 

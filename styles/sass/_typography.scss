@@ -44,16 +44,18 @@ legend {
 
 
 header p {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: $roboto;
 }
 
 // Main  ------>
 
 // Section Titles
 h2 {
-  font-size: 4rem;
-  font-weight: 700;
-  font-family: $testFont;
+  font-size: 8rem;
+  font-weight: 500;
+  font-family: $lato;
+  color: $titleColour;
 }
 
 // About Me Header
@@ -71,11 +73,11 @@ p {
 
 // Titles
 h4 {
-  font-size: 4rem;
-  font-family: $anotherNewFont;
-  font-weight: 700;
+  font-size: 6rem;
+  font-family: $lato;
+  font-weight: 500;
   letter-spacing: 1.25px;
-  color: darken($button, 25%);
+  color: $titleColour;
 }
 
 // Header Nav, Body, Toolkit, Contact, Form, Footer

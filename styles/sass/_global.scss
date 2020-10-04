@@ -7,7 +7,7 @@ body, h1, h2, h3, h4, h5, p, ul {
 }
 
 body {
-  background: #d2e2e8;
+  background: $background;
 }
 
 ul {
@@ -77,5 +77,16 @@ button,
 
 // Section Headings 
 h2 {
+  // display: inline-block;
   padding: 100px 0;
+  // &::after {
+  //   content: '';
+  //   width: 100px;
+  //   height: 2px;
+  //   background: $black;
+  //   display: block;
+  //   position: absolute;
+  //   right: -125px;
+  //   top: 124px;
+  // }
 }

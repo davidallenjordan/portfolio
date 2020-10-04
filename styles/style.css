@@ -341,13 +341,15 @@ legend {
 }
 
 header p {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 h2 {
-  font-size: 4rem;
-  font-weight: 700;
-  font-family: "Monda", sans-serif;
+  font-size: 8rem;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  color: #3f3f3f;
 }
 
 h3 {
@@ -360,11 +362,11 @@ p {
 }
 
 h4 {
-  font-size: 4rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-size: 6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
   letter-spacing: 1.25px;
-  color: #396032;
+  color: #3f3f3f;
 }
 
 nav li,
@@ -402,7 +404,7 @@ header {
 }
 
 nav ul {
-  padding: 30px 0 0 50px;
+  padding: 10px 0 10px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,20 +477,70 @@ header h1 {
   padding: 125px 0 25px 0;
 }
 
-header span {
+header h1 span {
   display: block;
 }
 
-header span:nth-of-type(3) {
-  display: inline-block;
-}
-
-header span:first-of-type {
+header h1 span:first-of-type {
   padding-bottom: 20px;
 }
 
-header p {
-  padding-bottom: 200px;
+header h1 span:nth-of-type(3) {
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background: #000;
+  margin-left: 10px;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background: #000;
+  }
+  49% {
+    background: #000;
+  }
+  50% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: #000;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background: #000;
+  }
+  49% {
+    background: #000;
+  }
+  50% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: #000;
+  }
+}
+
+.about {
+  padding-top: 100px;
 }
 
 .about p:nth-of-type(3) {

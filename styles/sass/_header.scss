@@ -6,7 +6,7 @@ header {
 // Navigation
 nav {
   ul {
-    padding: 30px 0 0 50px;
+    padding: 10px 0 10px 50px;
     @include flex (row, left, center);
   }
 
@@ -74,28 +74,51 @@ nav li:last-of-type a {
 header {
   h1 {
     padding: 125px 0 25px 0;
-  }
 
-  span {
-    display: block;
-  }
+    span {
+      display: block;
+    }
 
-  span:nth-of-type(3) {
-    display: inline-block;
-  }
+    span:first-of-type {
+      padding-bottom: 20px;
+    }
 
-  span:first-of-type {
-    padding-bottom: 20px;
-  }
-
-  p {
-    padding-bottom: 200px;
+    span:nth-of-type(3) {
+      display: inline-block;
+    }
   }
 }
 
-// Type Writer Effect
-// .heroBanner p {
+// Type Writer Effect 
 
-// }
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background: $black;
+  margin-left: 10px;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background: $black;
+  }
+  49% {
+    background: $black;
+  }
+  50% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: $black;
+  }
+}
 
 

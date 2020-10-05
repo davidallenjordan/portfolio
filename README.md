@@ -20,6 +20,6 @@ This is my portfolio created to show employers some of my projects so they give 
 - Adhere to accessibility best practices and use semantic HTML
 
 ## Challenges/Improvements: 
-- Make it more modern, I don't know if I will ever be satisfied with it (**Update - I did it!)
+- Make it more modern, I don't know if I will ever be satisfied with it (**Update** - I did it!)
 - Add more JavaScript effects
 - Add a blog post section! Maybe I'll write a blog post about adding a blog post section. Whoa

@@ -9,10 +9,6 @@
   h3, p {
     padding-bottom: 20px;
   }
-
-  // p {
-  //   max-width: 550px;
-  // }
 }
 
 .aboutContainer {
@@ -39,7 +35,7 @@
   margin: 0 0 0 50px;
   
   img {
-    box-shadow: 20px 10px $button;
+    box-shadow: 20px 10px lighten($button, 15%);
     border-radius: 3px;
   }
 }

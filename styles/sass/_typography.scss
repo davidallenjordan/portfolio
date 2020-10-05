@@ -5,7 +5,7 @@ button {
 }
 
 body {
-  font-family: $anotherNewFont;
+  font-family: $baseFont;
   color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,8 +27,6 @@ h1 {
 
   span:nth-of-type(3) {
     font-size: 7rem;
-    font-family: $anotherNewFont;
-
     background: linear-gradient(to top, #02570233 35%, transparent 35%);
   }
 }
@@ -45,7 +43,7 @@ legend {
 
 header p {
   font-size: 4rem;
-  font-family: $roboto;
+  font-family: $tertiaryFont;
 }
 
 // Main  ------>
@@ -53,9 +51,6 @@ header p {
 // Section Titles
 h2 {
   font-size: 8rem;
-  font-weight: 500;
-  font-family: $lato;
-  color: $titleColour;
 }
 
 // About Me Header
@@ -69,15 +64,19 @@ p {
   line-height: 1.4;
 }
 
+h2,
+h4 {
+  font-family: $SecondaryFont;
+  font-weight: 500;
+  color: $titleColour;
+}
+
 // Projects -->
 
 // Titles
 h4 {
   font-size: 6rem;
-  font-family: $lato;
-  font-weight: 500;
   letter-spacing: 1.25px;
-  color: $titleColour;
 }
 
 // Header Nav, Body, Toolkit, Contact, Form, Footer
@@ -86,8 +85,7 @@ nav li,
 .toolkit ul p,
 .connections p,
 .connections a,
-legend,
-footer p {
+legend {
   font-size: 2rem;
 }
 

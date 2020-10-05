@@ -237,8 +237,9 @@ body {
 }
 
 main {
-  background: -webkit-gradient(linear, left top, left bottom, from(#d2e2e8b6)), url(../assets/branchOne.png) no-repeat -200% 18%/90%, url(../assets/branchTwo.png) no-repeat 300% 62%/90%, url(../assets/branchThree.png) no-repeat -300% 99%/90%;
-  background: linear-gradient(#d2e2e8b6), url(../assets/branchOne.png) no-repeat -200% 18%/90%, url(../assets/branchTwo.png) no-repeat 300% 62%/90%, url(../assets/branchThree.png) no-repeat -300% 99%/90%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d2e2e8b6)), url(../assets/branchOne.png) no-repeat -200% 18%, url(../assets/branchTwo.png) no-repeat 300% 62%, url(../assets/branchThree.png) no-repeat -300% 99%;
+  background: linear-gradient(#d2e2e8b6), url(../assets/branchOne.png) no-repeat -200% 18%, url(../assets/branchTwo.png) no-repeat 300% 62%, url(../assets/branchThree.png) no-repeat -300% 99%;
+  background-size: 100%, 90%, 90%, 90%;
 }
 
 ul {
@@ -379,8 +380,7 @@ nav li,
 .toolkit ul p,
 .connections p,
 .connections a,
-legend,
-footer p {
+legend {
   font-size: 2rem;
 }
 
@@ -595,8 +595,8 @@ header h1 span:nth-of-type(3) {
 }
 
 .profilePic img {
-  -webkit-box-shadow: 20px 10px #6fae64;
-          box-shadow: 20px 10px #6fae64;
+  -webkit-box-shadow: 20px 10px #9ec896;
+          box-shadow: 20px 10px #9ec896;
   border-radius: 3px;
 }
 
@@ -894,6 +894,10 @@ form legend,
   text-align: center;
 }
 
+.legendMobile {
+  display: none;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -911,7 +915,9 @@ form {
 }
 
 form legend {
+  max-width: 500px;
   padding-bottom: 10px;
+  display: block;
 }
 
 form input {
@@ -929,10 +935,6 @@ form textarea {
   resize: none;
 }
 
-form legend {
-  max-width: 500px;
-}
-
 form button {
   width: 150px;
   margin: 0 auto;
@@ -942,6 +944,7 @@ footer p {
   padding: 15px;
   background: white;
   text-align: center;
+  font-size: 1.6rem;
 }
 
 span.avoidWrap {
@@ -1024,6 +1027,10 @@ span.avoidWrap {
 @media (max-width: 850px) {
   h1 span:nth-of-type(3) {
     font-size: 6rem;
+  }
+  main {
+    background-size: 100%, 100%, 100%, 100%;
+    background-position: 100%, 100% 15%, 100% 67%, 100% 90%;
   }
   .aboutContainer {
     -webkit-box-pack: center;
@@ -1140,7 +1147,7 @@ span.avoidWrap {
 @media (max-width: 580px) {
   .mobileNav {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   nav a:not(.mobileNav) {
     padding: 5px 10px;
@@ -1172,16 +1179,20 @@ span.avoidWrap {
     height: 3px;
   }
   h1 span:nth-of-type(1) {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   h1 span:nth-of-type(2) {
     font-size: 2.5rem;
   }
   h1 span:nth-of-type(3) {
-    font-size: 2.7rem;
+    font-size: 2.9rem;
   }
   header p {
     font-size: 2.5rem;
+  }
+  main {
+    background-size: 100%, 101%, 105%, 105%;
+    background-position: 100%, 100% 16%, -523% 74%, 359% 87%;
   }
   h2 {
     padding: 50px 0;
@@ -1198,6 +1209,8 @@ span.avoidWrap {
   }
   .about a {
     width: 226px;
+    height: 62px;
+    padding: 17px 15px;
   }
   .profilePic {
     max-width: 350px;
@@ -1209,16 +1222,32 @@ span.avoidWrap {
     margin: 0 0 5px 0;
   }
   .projects a {
+    height: 62px;
+    padding: 15px 15px;
+    font-size: 2.5rem;
     text-align: center;
   }
+  .projects .projectContainer p:last-of-type {
+    padding: 10px 5px 30px 5px;
+  }
+  h4 {
+    font-weight: 600;
+  }
   .projectContainer {
-    padding: 20px 20px;
+    padding: 25px 10px;
     margin: 25px auto;
+  }
+  .projectContainer p:last-of-type {
+    font-size: 1.9rem;
   }
   .projectImage,
   .projectInfo {
     min-width: 0;
-    max-width: 300px;
+    max-width: 100%;
+  }
+  h4,
+  .projectInfo p {
+    padding: 0 5px;
   }
   .toolkitContainer {
     -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
@@ -1264,14 +1293,29 @@ span.avoidWrap {
   .mobileToolkit {
     display: block;
   }
+  form {
+    width: 100%;
+  }
+  form button {
+    height: 62px;
+    width: 200px;
+    font-size: 2.5rem;
+    padding: 15px 15px;
+  }
   .contact {
     padding-bottom: 50px;
+  }
+  .contactBox a i {
+    margin-top: 7px;
   }
   .contactContainer {
     padding: 0 10px 25px 10px;
   }
   .connections {
     width: 100%;
+  }
+  .connections p {
+    font-size: 2.5rem;
   }
   .follow {
     -webkit-box-pack: center;
@@ -1281,8 +1325,14 @@ span.avoidWrap {
   .socials p {
     display: none;
   }
+  .legendDesktop {
+    display: none;
+  }
+  .legendMobile {
+    display: inline;
+  }
   legend {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   button,
   .projects a,
@@ -1306,6 +1356,9 @@ span.avoidWrap {
 }
 
 @media (max-width: 344px) {
+  h1 span:nth-of-type(3) {
+    font-size: 2.7rem;
+  }
   .toolkitContainer li,
   .toolkitContainer li:last-child {
     padding-left: 27%;

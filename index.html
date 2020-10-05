@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174062657-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174062657-1');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David Allen-Jordan</title>
@@ -8,14 +18,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
   <link rel="stylesheet" href="./styles/style.css">
   <link
-  href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@300;400;500;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Slab:wght@300;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
   rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap"
-  rel="stylesheet">
-  <link
-  href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-  rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
@@ -30,10 +34,10 @@
     <nav>
       <ul>
         <li><a class="mobileNav" href="#"><i class="fas fa-bars"></i></a></li>
-        <li><a class="item mobileDropDown" href="#about">About Me</a></li>
-        <li><a class="item mobileDropDown" href="#projects">My Work</a></li>
-        <li><a class="item mobileDropDown" href="#toolkit">Skills</a></li>
-        <li><a class="item mobileDropDown" class="contactLink" href="#contact">Contact</a></li>
+        <li><a class="mobileDropDown" href="#about">About Me</a></li>
+        <li><a class="mobileDropDown" href="#projects">My Work</a></li>
+        <li><a class="mobileDropDown" href="#toolkit">Skills</a></li>
+        <li><a class="mobileDropDown" class="contactLink" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -76,9 +80,9 @@
 
             <p>My passion for development is fueled by over 8 years of experience creating visually striking spaces for clients. I build accessible, modern websites with JavaScript, React, CSS/Sass, REST APIs and more.</p>
 
-            <p>Take a look around and lets get to know each other.</p>
+            <p>Take a look around and let's get to know each other!</p>
                                                 
-            <a target="_blank" href="david-allen-jordan-portfolio-version-resume.pdf" >Download Resume</a>
+            <a target="_blank" tabindex="0" href="david-allen-jordan-portfolio-version-resume.pdf" >Download Resume</a>
           </div> 
           
         </div>  
@@ -123,7 +127,7 @@
 
               <div class="projectInfo">
                 <h4>Element Quiz</h4>
-                <p>Are you an emotional, empathic being or do you find yourself more fiery and assertive? Take this quiz to see which of the four classical elements you are connected to.</p>
+                <p>Do you let emotions and empathy guide you or do you find yourself more fiery and assertive? Take this quiz to see which of the four classical elements you are connected to.</p>
                 <p>JavaScript, jQuery, Sass, CSS</p>
                 <a target="_blank" href="https://github.com/davidallenjordan/elementQuiz" >View Repo</a>
                 <a target="_blank" href="https://davidallenjordan.github.io/elementQuiz/" >View Live</a>
@@ -141,7 +145,7 @@
 
               <div class="projectInfo">
                 <h4>PlantList</h4>
-                <p>Whether you're Planting a garden or studying for that horticulture exam, this app can help you find the plants you need!</p>
+                <p>Whether you're planting a garden or studying for that horticulture exam, this app can help you find the plants you need!</p>
                 <p>Rest API, Pair-Programming, JavaScript, Sass, CSS</p>
                 <a target="_blank" href="https://github.com/davidallenjordan/plantList" >View Repo</a>
                 <a target="_blank" href="https://davidallenjordan.github.io/plantList/" >View Live</a>
@@ -159,7 +163,7 @@
 
               <div class="projectInfo">
                 <h4>Sanctuary Helpers</h4>
-                <p>Is it an interior design or furniture blog? All I know is this accessible site was created with semantic HTML using a PhotoShop image as reference.</p>
+                <p>Is it an interior design or furniture blog? All I know is this accessible site was created with semantic HTML using a Photoshop image as reference.</p>
                 <p>PSD Conversion, Multi-page, Sass, CSS</p>
                 <a target="_blank" href="https://github.com/davidallenjordan/SanctuaryHelpers" >View Repo</a>
                 <a target="_blank" href="https://davidallenjordan.github.io/SanctuaryHelpers/" >View Live</a>
@@ -288,7 +292,7 @@
           <!-- Email form -->
   
           <form method="POST" action="https://formspree.io/mzbjqlyo">
-            <legend>Want to get a hold of me? Just fill out the form and I'll get back to you as soon as possible</legend>
+            <legend><span class="legendDesktop">Want to get a hold of me? Fill out the form and I'll get back to you as soon as possible</span> <span class="legendMobile">Fill out the form and I'll get back to you!</span></legend>
   
             <label class="srOnly" for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>

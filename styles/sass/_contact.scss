@@ -132,11 +132,17 @@ form legend,
 
 
 // Form
+.legendMobile {
+  display: none;
+}
+
 form {
   @include flex (column, 0, 0);
 
   legend {
+    max-width: 500px;
     padding-bottom: 10px;
+    display: block;
   }
 
   input {
@@ -152,10 +158,6 @@ form {
     margin-bottom: 20px;
     border: 1px solid $black;
     resize: none;
-  }
-
-  legend {
-    max-width: 500px;
   }
 
   button {

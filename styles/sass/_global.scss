@@ -13,9 +13,11 @@ body {
 main {
   background: 
     linear-gradient(#d2e2e8b6),
-    url(../assets/branchOne.png) no-repeat -200% 18% / 90%, 
-    url(../assets/branchTwo.png) no-repeat 300% 62% / 90%,
-    url(../assets/branchThree.png) no-repeat -300% 99% / 90%;
+    url(../assets/branchOne.png) no-repeat -200% 18%, 
+    url(../assets/branchTwo.png) no-repeat 300% 62%,
+    url(../assets/branchThree.png) no-repeat -300% 99%;
+
+  background-size: 100%, 90%, 90%, 90%;
 }
 
 ul {
@@ -85,16 +87,5 @@ button,
 
 // Section Headings 
 h2 {
-  // display: inline-block;
   padding: 100px 0;
-  // &::after {
-  //   content: '';
-  //   width: 100px;
-  //   height: 2px;
-  //   background: $black;
-  //   display: block;
-  //   position: absolute;
-  //   right: -125px;
-  //   top: 124px;
-  // }
 }

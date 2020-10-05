@@ -1,6 +1,6 @@
 // About Me - slide in
 .bioContainer {
-  transition-property: left opacity;
+  transition-property: left, opacity;
   transition-duration: 1s;
 }
 
@@ -26,7 +26,7 @@
 
 // Toolkit - Slide Up
 .toolkitContainer {
-  transition-property: bottom opacity;
+  transition-property: bottom, opacity;
   transition-duration: 1s;
 }
 

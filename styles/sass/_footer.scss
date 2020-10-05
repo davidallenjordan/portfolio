@@ -3,3 +3,7 @@ footer p {
   background: lighten($button, 50%);
   text-align: center;
 }
+
+  span.avoidWrap {
+    display: inline-block;
+  }

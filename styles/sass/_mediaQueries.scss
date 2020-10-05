@@ -35,10 +35,6 @@
     }
     
     // Contact -->
-
-    .connections {
-      margin: 79px 25px 0 0;
-    }
     
     form,
     legend {
@@ -48,6 +44,11 @@
 
 // Smaller Screens / Tablets ------------>
 @media (max-width: 850px) {
+  // Header -->
+
+  h1 span:nth-of-type(3) {
+    font-size: 6rem;
+  }
   // About Me -->
   
   .aboutContainer {
@@ -86,59 +87,25 @@
     align-self: center;
   }
 
-  .connectionsContainer {
-    flex-direction: row;
-  }
-
-  .contactBox:first-of-type {
-    margin-right: 10px;
-  }
-
-  .contactBox:nth-of-type(2) {
-    margin-bottom: 30px;
-  }
-
   form,
   legend {
     max-width: 500px;
   }
 }
+
 // Small Screens ------------>
 @media (max-width: 715px) {
-  // Global -->
-
-  .sectionTitle {
-    padding: 10px 0;
-  }
-  h2 {
-    font-weight: 200;
-    
-    &:before,
-    &:after {
-      width: 45px;
-      height: 1px;
-    }
-    
-    &:after {
-      right: -60px;
-    }
-    
-    &:before {
-      left: -60px;
-    }
-  }
-
   // Header -->
 
   h1 {
     span:nth-of-type(1) {
       font-size: 2.5rem;
     }
-
+    
     span:nth-of-type(2) {
       font-size: 4rem;
     }
-
+    
     span:nth-of-type(3) {
       font-size: 5rem;
     }
@@ -146,14 +113,13 @@
   
   header {
     height: auto;
-
+    
     h1 {
       padding-top: 70px;
     }
     
     p {
-      padding-bottom: 170px;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
     }
   }
 
@@ -188,7 +154,7 @@
   }
 
   h4 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .projectContainer p:first-of-type {
@@ -229,24 +195,15 @@
   }
 
   // Contact -->
+
   .socials a {
     font-size: 3rem;
     padding: 10px 15px;
   }
-
-  .socials li:last-child a {
-    margin: 0;
-  }
 }
 
-// Mobile / Small Tablets ------------>
-@media (max-width: 526px) {
-  // Global -->
-
-  .sectionTitle {
-    margin-bottom: 50px;
-  }
-
+// Mobile / Small Tablets / Final Query ------------>
+@media (max-width: 580px) {
   // Header -->
 
   // Mobile Nav -->
@@ -272,8 +229,21 @@
     margin-bottom: -130px;
   }
   
+  // Mobile Nav
+  .mobileDropDown.toggleDropDown {
+    transition: opacity 0.3s;
+  }
+
+  .mobileDropDown {
+    opacity: 0;
+  }
+  
   .toggleDropDown {
-    visibility: hidden;
+    opacity: 1;
+  }
+
+  nav li:last-of-type a::after {
+    height: 3px;
   }
   
   // Hero Statement
@@ -287,18 +257,25 @@
     }
 
     span:nth-of-type(3) {
-      font-size: 3.1rem;
+      font-size: 2.7rem;
     }
   }
 
   header p {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  // Main --->
+
+  h2 {
+    padding: 50px 0;
+    font-size: 6rem;
   }
 
   // About Me -->
 
   .about {
-    padding-bottom: 50px;
+    padding-top: 50px;
 
     h3 {
       font-size: 2rem;
@@ -311,11 +288,6 @@
     a {
       width: 226px;
     }
-
-    p:nth-of-type(3) {
-      padding-bottom: 50px;
-    }
-
   }
 
   .profilePic {
@@ -324,9 +296,11 @@
 
   // Projects -->
 
-  .projects {
-    background: lighten($button, 30%);
+  h4 {
+    font-size: 3.5rem;
+  }
 
+  .projects {
     // Project Buttons
     a:first-of-type {
       margin: 0 0 5px 0;
@@ -340,14 +314,8 @@
   .projectContainer {
     padding: 20px 20px;
     margin: 25px auto;
-
-    background: #fbfffb;
   }
   
-  .projects ul li:last-of-type .projectContainer {
-    margin: 0 auto;
-  }
-
   .projectImage,
   .projectInfo {
     min-width: 0;
@@ -357,8 +325,6 @@
   // Toolkit -->
 
   .toolkitContainer {
-    padding-bottom: 50px;
-
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px 10px;
 
@@ -371,14 +337,14 @@
       height: 100%;
       width: 100%;
       padding: 5px;
+      text-align: left;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex(row, 0, center);
     }
 
     i {
       font-size: 3rem;
+      width: 37.5px;
     }
     
     li:last-of-type i {
@@ -390,7 +356,7 @@
     }
   }
 
-  // Mobile list edit
+  // Toolkit Mobile Version
   .desktopToolkit {
     display: none;
   }
@@ -403,42 +369,22 @@
 
   .contact {
     padding-bottom: 50px;
-
-    background-position: center;
-    background-size: cover;
-  }
-
-  .follow {
-    flex-direction: column;
-
-    p {
-      padding-bottom: 5px;
-    }
-  }
-
-  .socials a {
-    display: block;
   }
 
   .contactContainer {
-    padding: 25px 10px;
+    padding: 0 10px 25px 10px;
   }
 
   .connections {
-    padding: 0 0 50px 0;
+    width: 100%;
   }
 
-  .connectionsContainer {
-    flex-direction: column;
+  .follow {
     justify-content: center;
   }
 
-  .contactBox {
-    margin: 0;
-  }
-
-  .contactBox:first-of-type {
-    margin: 0 0 5px 0;
+  .socials p {
+      display: none;
   }
 
   legend {
@@ -462,7 +408,16 @@
       background: $button;
     }
   }
+// End of Query
+}
 
+@media (max-width: 344px) {
+  .toolkitContainer {
+    li,
+    li:last-child {
+      padding-left: 27%;
+    }
+  }
 }
 
 

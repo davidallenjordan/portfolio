@@ -73,7 +73,7 @@ nav li:last-of-type a {
 // Introduction
 header {
   h1 {
-    padding: 125px 0 25px 0;
+    padding: 125px 0 10px 0;
 
     span {
       display: block;
@@ -95,7 +95,7 @@ header {
   display: inline-block;
   width: 3px;
   background: $black;
-  margin-left: 10px;
+  margin-left: 5px;
   animation: blink 1s infinite;
 }
 

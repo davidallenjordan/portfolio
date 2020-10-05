@@ -21,9 +21,9 @@ app.typeWriterEffect = () => {
     'Problem Solver', 
     'Designer', 
   ];
-  const typingDelay = 150;
+  const typingDelay = 125;
   const erasingDelay = 100;
-  const newTextDelay = 3000;
+  const newTextDelay = 2000;
   let textArrayIndex = 0;
   let charIndex = 0;
   

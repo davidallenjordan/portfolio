@@ -10,6 +10,14 @@ body {
   background: $background;
 }
 
+main {
+  background: 
+    linear-gradient(#d2e2e8b6),
+    url(../assets/branchOne.png) no-repeat -200% 18% / 90%, 
+    url(../assets/branchTwo.png) no-repeat 300% 62% / 90%,
+    url(../assets/branchThree.png) no-repeat -300% 99% / 90%;
+}
+
 ul {
   list-style: none;
 }

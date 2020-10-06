@@ -1,14 +1,21 @@
 
-// Hello! I will be converting the remaining jQuery here to plain JavaScript soon :)
+// Hello! Thanks for taking a look at my code. I've just finished making my slide animations modular using the intersection observer. I've also converted my jQuery to plain js :)
 
 // App Name Space
 const app = () => {}
 
-// Mobile Nav Menu
 app.mobileNav = () => {
-  $('.mobileNav').on('click', () => {
-    $('.mobileDropDown').toggleClass('toggleDropDown');
-  })
+  const nav = document.querySelector('.mobileNav');
+  const navItem = document.querySelectorAll('.dropDownItem');
+  
+  function dropDown() {
+    let int = 0;
+    navItem.forEach(el => {
+      navItem[int].classList.toggle('toggleDropDown');
+      int++
+    })
+  }
+  nav.addEventListener('click', dropDown);
 }
 
 // Type Writer Effect ----->
@@ -59,88 +66,82 @@ app.typeWriterEffect = () => {
 }
 // End of Type Writer Effect --->
 
-// About Me slide in from left animation, CSS in _animations
-app.aboutSlideIn = () => {
-  const elDesktop = 600;
-  const elMobile = 300;
-  const widthMobile = 526;
 
-  $('#slideFromLeft').addClass('hideBio');
+// About Me Animation Settings
+app.aboutAnimate = () => {
+  const target = 'bioContainer';
+  const animationCSS = 'aboutReveal';
+  const hideCSS = 'aboutHide';
+  const hideEl = document.querySelector(`.${target}`);
 
-  $(window).scroll( () => {
-    const yScrollPosition = window.pageYOffset;
-    let scrollPosition = elDesktop;
-
-    if ($(window).width() <= widthMobile) {
-      scrollPosition = elMobile;
-    }
-    
-    if(yScrollPosition > scrollPosition) {
-      $('#slideFromLeft').addClass('aboutMeSlideIn')
-    }
-  })
+  hideEl.classList.add(`${hideCSS}`);
+  app.elementObserver(target, animationCSS);
 }
 
-app.toolkitSlideUp = () => {
-  const widthDesktop = 995;
-  const widthBetween = 715;
-  const widthMobile = 526;
-  const lrgAndSmlScreens = 3200;
-  const medScreens = 4100;
-  const otherScreens = 3600;
+// Projects Animation Settings
+app.projectAnimate = () => {
+  const target = 'projectContainer';
+  const animationCSS = 'projectReveal';
+  const hideCSS = 'projectsHide';
+  const hideEl = document.querySelectorAll(`.${target}`);
+  let int = 0;
 
-  $('#toolkitAnimate').addClass('hideToolkit');
-  
-  $(window).scroll( () => {
-    const yScrollPosition = window.pageYOffset;
-    let scrollPosition;
-    if ($(window).width() >= widthDesktop || $(window).width() <= widthMobile) {
-      scrollPosition = lrgAndSmlScreens;
-    } else if ($(window).width() <= widthDesktop && ($(window).width() >= widthBetween)) {
-      scrollPosition = medScreens;
-    } else {
-      scrollPosition = otherScreens;
-    }
-
-    if (yScrollPosition > scrollPosition) {
-      $('#toolkitAnimate').addClass('toolkitSlideUp');
-    }
-
+  hideEl.forEach(el => {
+    hideEl[int].classList.add(`${hideCSS}`);
+    int++
   })
+
+  app.elementObserver(target, animationCSS);
+}
+
+// ToolKit Animation Settings
+app.toolkitAnimate = () => {
+  const target = 'toolkitContainer';
+  const animationCSS = 'toolkitReveal';
+  const hideCSS = 'toolkitHide';
+  const hideEl = document.querySelector(`.${target}`);
+
+  hideEl.classList.add(`${hideCSS}`);
+  app.elementObserver(target, animationCSS);
 }
 
 // Intersection Observer Saving My Life!!
-// Projects Slide In
-app.projectsAnimation = () => {
-  let target = document.querySelectorAll('.projectContainer');
+// Element Observer - Adds class when element intersects viewport
+app.elementObserver = (currentTarget, animationClass) => {
+  let target = document.querySelectorAll(`.${currentTarget}`);
   let options = {
     root: null,
-    rootMargin: '-100px',
+    rootMargin: '-155px',
     threshhold: 1
   };
   let int = 0;
-
+  
   let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {
-        target[int].classList.add('projectAnimate');
+        target[int].classList.add(`${animationClass}`);
         int++;
-
+        
         observer.unobserve(entry.target)
       }
     })
   }, options);
-  
   
   target.forEach(thing => {
     observer.observe(thing);
   });
 }
 
-$(document).ready( () => {
+// Initializes Animations - not necessary but cleaner
+app.animationInit = () => {
+app.aboutAnimate();
+app.projectAnimate();
+app.toolkitAnimate();
+}
+
+// Document Loaded - Initialize JS
+document.addEventListener('DOMContentLoaded', function() {
   app.mobileNav();
-  app.aboutSlideIn();
-  app.toolkitSlideUp();
   app.typeWriterEffect();
-  app.projectsAnimation();
+  app.animationInit();
 })

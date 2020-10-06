@@ -237,16 +237,18 @@
     margin-bottom: -130px;
   }
   
-  // Mobile Nav
-  .mobileDropDown.toggleDropDown {
+  // Mobile Navigation
+  .dropDownItem.toggleDropDown {
     transition: opacity 0.3s;
   }
 
-  .mobileDropDown {
+  .dropDownItem {
+    pointer-events: none;
     opacity: 0;
   }
   
   .toggleDropDown {
+    pointer-events: all;
     opacity: 1;
   }
 
@@ -315,11 +317,16 @@
     font-size: 3.5rem;
   }
 
-  .projectContainer {
+  // Animations - Projects and About
+  .aboutHide {
+    left: -200px;
+  }
+  .projectsHide {
     left: 200px;
   }
 
-  .projectAnimate {
+  .projectReveal,
+  .aboutReveal {
     left: 0;
   }
 
@@ -481,13 +488,29 @@
 // End of Query
 }
 
+// People who need bigger phones
 @media (max-width: 344px) {
   h1 {
     span:nth-of-type(3) {
       font-size: 2.7rem;
     }
-
   }
+
+  // Animations
+  .aboutHide {
+    left: -145px;
+  }
+
+  .projectsHide {
+    left: 145px;
+  }
+
+  .projectReveal,
+  .aboutReveal {
+    left: 0;
+  }
+
+
   .toolkitContainer {
     li,
     li:last-child {

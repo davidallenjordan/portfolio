@@ -14,13 +14,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David Allen-Jordan</title>
+  <!-- Icons -->
   <script src="https://kit.fontawesome.com/46911dc7bd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./styles/style.css">
   <link
   href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Slab:wght@300;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
   rel="stylesheet">
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
 </head>
 
   <header>
@@ -30,10 +32,10 @@
     <nav>
       <ul>
         <li><a class="mobileNav" href="#"><i class="fas fa-bars"></i></a></li>
-        <li><a class="mobileDropDown" href="#about">About Me</a></li>
-        <li><a class="mobileDropDown" href="#projects">My Work</a></li>
-        <li><a class="mobileDropDown" href="#toolkit">Skills</a></li>
-        <li><a class="mobileDropDown" class="contactLink" href="#contact">Contact</a></li>
+        <li><a class="dropDownItem" href="#about">About Me</a></li>
+        <li><a class="dropDownItem" href="#projects">My Work</a></li>
+        <li><a class="dropDownItem" href="#toolkit">Skills</a></li>
+        <li><a class="dropDownItem" class="contactLink" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -63,15 +65,15 @@
         <div class="aboutContainer">
 
           <div class="profilePic desktopImage">
-            <img src="./assets/profileDesktop.jpeg" alt="A profile picture of a developer looking for a job.">
+            <img src="./assets/profileDesktop.jpeg" height="330" width="248" alt="A profile picture of a developer looking for a job.">
           </div>
 
           <div class="profilePic mobileImage">
-            <img src="./assets/profileMobile.jpeg" alt="A profile picture of a developer looking for a job.">
+            <img src="./assets/profileMobile.jpeg" height="330" width="248" alt="A profile picture of a developer looking for a job.">
           </div>
 
 
-          <div class="bioContainer" id="slideFromLeft">
+          <div class="bioContainer">
             <h3>Hello again! I am a front end developer seeking opportunities</h3>
 
             <p>My passion for development is fueled by over 8 years of experience creating visually striking spaces for clients. I build accessible, modern websites with JavaScript, React, CSS/Sass, REST APIs and more.</p>
@@ -175,13 +177,13 @@
 
     <!-- Skill section with icons for all the good stuff I know -->
 
-    <section class="toolkit" id="toolkit">
+    <section class="toolkit">
 
       <div class="wrapper">
 
         <h2>My Toolkit</h2>
 
-        <ul class="toolkitContainer" id="toolkitAnimate">
+        <ul class="toolkitContainer">
           <li>
             <i aria-hidden="true" class="fab fa-html5"></i>
             <p>HTML5</p>
@@ -315,7 +317,6 @@
     <p>Copyright <i class="far fa-copyright"></i> <span class="avoidWrap">David Allen-Jordan</span> 2020</p>
   </footer>
 
-<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
 <script src="./script.js"></script>
 </body>
 </html>

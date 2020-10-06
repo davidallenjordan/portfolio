@@ -951,23 +951,21 @@ span.avoidWrap {
   display: inline-block;
 }
 
-.hideBio {
-  left: -300px;
-}
-
-.aboutMeSlideIn {
-  left: 0;
-}
-
-.hideBio,
-.hideToolkit {
+.aboutHide {
   position: relative;
+  left: -300px;
   opacity: 0;
 }
 
-.aboutMeSlideIn,
-.toolkitSlideUp {
+.toolkitHide {
+  position: relative;
+  bottom: -200px;
+  opacity: 0;
+}
+
+.toolkitReveal {
   opacity: 1;
+  bottom: 0;
 }
 
 .toolkitContainer {
@@ -975,25 +973,18 @@ span.avoidWrap {
   transition-property: bottom, opacity;
 }
 
-.hideToolkit {
-  bottom: -300px;
-}
-
-.toolkitSlideUp {
-  bottom: 0;
-}
-
 .projects {
   overflow: hidden;
 }
 
-.projectContainer {
+.projectsHide {
   position: relative;
   opacity: 0;
   left: 300px;
 }
 
-.projectAnimate {
+.aboutReveal,
+.projectReveal {
   left: 0;
   opacity: 1;
 }
@@ -1186,14 +1177,16 @@ span.avoidWrap {
   nav ul li:last-child {
     margin-bottom: -130px;
   }
-  .mobileDropDown.toggleDropDown {
+  .dropDownItem.toggleDropDown {
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
   }
-  .mobileDropDown {
+  .dropDownItem {
+    pointer-events: none;
     opacity: 0;
   }
   .toggleDropDown {
+    pointer-events: all;
     opacity: 1;
   }
   nav li:last-of-type a::after {
@@ -1239,10 +1232,14 @@ span.avoidWrap {
   h4 {
     font-size: 3.5rem;
   }
-  .projectContainer {
+  .aboutHide {
+    left: -200px;
+  }
+  .projectsHide {
     left: 200px;
   }
-  .projectAnimate {
+  .projectReveal,
+  .aboutReveal {
     left: 0;
   }
   .projects a:first-of-type {
@@ -1385,6 +1382,16 @@ span.avoidWrap {
 @media (max-width: 344px) {
   h1 span:nth-of-type(3) {
     font-size: 2.7rem;
+  }
+  .aboutHide {
+    left: -145px;
+  }
+  .projectsHide {
+    left: 145px;
+  }
+  .projectReveal,
+  .aboutReveal {
+    left: 0;
   }
   .toolkitContainer li,
   .toolkitContainer li:last-child {

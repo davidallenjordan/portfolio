@@ -1,55 +1,48 @@
-// About Me - slide in
-.hideBio {
-  left: -300px;
-}
-
-.aboutMeSlideIn {
-  left: 0;
-}
-
-// About Me + Toolkit Styles 
-.hideBio,
-.hideToolkit {
+// About Me Hide
+.aboutHide {
   position: relative;
+  left: -300px;
   opacity: 0;
 }
 
-.aboutMeSlideIn,
-.toolkitSlideUp {
-  opacity: 1;
+// Toolkit Hide
+.toolkitHide {
+  position: relative;
+  bottom: -200px;
+  opacity: 0;
 }
 
-// Toolkit - Slide Up
+// Toolkit Reveal
+.toolkitReveal {
+  opacity: 1;
+  bottom: 0;
+}
+
+// Toolkit Settings
 .toolkitContainer {
   transition-property: bottom, opacity;
 }
 
-.hideToolkit {
-  bottom: -300px;
-}
-
-.toolkitSlideUp {
-  bottom: 0;
-}
-
-// Projects Animation
-
+// Project Settings
 .projects {
   overflow: hidden;
 }
 
-.projectContainer {
+// Projects Hide
+.projectsHide {
   position: relative;
   opacity: 0;
   left: 300px;
 }
 
-.projectAnimate {
+// About and Projects Reveal
+.aboutReveal,
+.projectReveal {
   left: 0;
   opacity: 1;
 }
 
-// Combined Styles
+// Animation Settings - About, Projects, Toolkit
 
 .projectContainer,
 .bioContainer {

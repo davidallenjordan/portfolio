@@ -1,9 +1,4 @@
 // About Me - slide in
-.bioContainer {
-  transition-property: left, opacity;
-  transition-duration: 1s;
-}
-
 .hideBio {
   left: -300px;
 }
@@ -27,7 +22,6 @@
 // Toolkit - Slide Up
 .toolkitContainer {
   transition-property: bottom, opacity;
-  transition-duration: 1s;
 }
 
 .hideToolkit {
@@ -37,3 +31,34 @@
 .toolkitSlideUp {
   bottom: 0;
 }
+
+// Projects Animation
+
+.projects {
+  overflow: hidden;
+}
+
+.projectContainer {
+  position: relative;
+  opacity: 0;
+  left: 300px;
+}
+
+.projectAnimate {
+  left: 0;
+  opacity: 1;
+}
+
+// Combined Styles
+
+.projectContainer,
+.bioContainer {
+  transition-property: left, opacity;
+}
+
+.projectContainer,
+.toolkitContainer,
+.bioContainer {
+  transition-duration: 1s;
+  transition-timing-function: ease;
+} 

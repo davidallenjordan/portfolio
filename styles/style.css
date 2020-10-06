@@ -334,7 +334,6 @@ h1 span:nth-of-type(2) {
 
 h1 span:nth-of-type(3) {
   font-size: 7rem;
-  font-family: "Poppins", sans-serif;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #02570233), color-stop(35%, transparent));
   background: linear-gradient(to top, #02570233 35%, transparent 35%);
 }
@@ -353,9 +352,6 @@ header p {
 
 h2 {
   font-size: 8rem;
-  font-weight: 500;
-  font-family: "Lato", sans-serif;
-  color: #3f3f3f;
 }
 
 h3 {
@@ -367,12 +363,16 @@ p {
   line-height: 1.4;
 }
 
+h2,
 h4 {
-  font-size: 6rem;
   font-family: "Lato", sans-serif;
   font-weight: 500;
-  letter-spacing: 1.25px;
   color: #3f3f3f;
+}
+
+h4 {
+  font-size: 6rem;
+  letter-spacing: 1.25px;
 }
 
 nav li,
@@ -951,13 +951,6 @@ span.avoidWrap {
   display: inline-block;
 }
 
-.bioContainer {
-  -webkit-transition-property: left, opacity;
-  transition-property: left, opacity;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
 .hideBio {
   left: -300px;
 }
@@ -980,8 +973,6 @@ span.avoidWrap {
 .toolkitContainer {
   -webkit-transition-property: bottom, opacity;
   transition-property: bottom, opacity;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
 }
 
 .hideToolkit {
@@ -990,6 +981,36 @@ span.avoidWrap {
 
 .toolkitSlideUp {
   bottom: 0;
+}
+
+.projects {
+  overflow: hidden;
+}
+
+.projectContainer {
+  position: relative;
+  opacity: 0;
+  left: 300px;
+}
+
+.projectAnimate {
+  left: 0;
+  opacity: 1;
+}
+
+.projectContainer,
+.bioContainer {
+  -webkit-transition-property: left, opacity;
+  transition-property: left, opacity;
+}
+
+.projectContainer,
+.toolkitContainer,
+.bioContainer {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1217,6 +1238,12 @@ span.avoidWrap {
   }
   h4 {
     font-size: 3.5rem;
+  }
+  .projectContainer {
+    left: 200px;
+  }
+  .projectAnimate {
+    left: 0;
   }
   .projects a:first-of-type {
     margin: 0 0 5px 0;

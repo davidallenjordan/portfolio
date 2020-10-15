@@ -17,7 +17,11 @@
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/46911dc7bd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="manifest" href="./assets/site.webmanifest">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./styles/style.css">
   <link
@@ -35,7 +39,7 @@
         <li><a class="dropDownItem" href="#about">About Me</a></li>
         <li><a class="dropDownItem" href="#projects">My Work</a></li>
         <li><a class="dropDownItem" href="#toolkit">Skills</a></li>
-        <li><a class="dropDownItem" class="contactLink" href="#contact">Contact</a></li>
+        <li><a class="dropDownItem contactLink" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -177,7 +181,7 @@
 
     <!-- Skill section with icons for all the good stuff I know -->
 
-    <section class="toolkit">
+    <section class="toolkit" id="toolkit">
 
       <div class="wrapper">
 
@@ -278,7 +282,7 @@
             <li class="follow">
               
               <ul class="socials">
-                <p>Follow</p>
+                <li class="socialsTitle"><p>Follow</p></li>
                 <li><a target="_blank" aria-label="LinkedIn" href="https://www.linkedin.com/in/david-allen-jordan-3475151b1/"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a target="_blank" aria-label="GitHub" href="https://github.com/davidallenjordan"><i class="fab fa-github"></i></a></li>
                 <li><a target="_blank" aria-label="Twitter" href="https://twitter.com/davidaj416"><i class="fab fa-twitter"></i></a></li>
@@ -290,7 +294,7 @@
           <!-- Email form -->
   
           <form method="POST" action="https://formspree.io/mzbjqlyo">
-            <legend><span class="legendDesktop">Want to get a hold of me? Fill out the form and I'll get back to you as soon as possible</span> <span class="legendMobile">Fill out the form and I'll get back to you!</span></legend>
+            <h5><span class="formTitleDesktop">Want to get a hold of me? Fill out the form and I'll get back to you as soon as possible</span> <span class="formTitleMobile">Fill out the form and I'll get back to you!</span></h5>
   
             <label class="srOnly" for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>

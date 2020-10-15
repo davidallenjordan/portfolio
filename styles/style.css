@@ -341,7 +341,7 @@ h1 span:nth-of-type(3) {
 span:nth-of-type(3),
 h3,
 .connections p,
-legend {
+h5 {
   font-weight: 500;
 }
 
@@ -380,7 +380,7 @@ nav li,
 .toolkit ul p,
 .connections p,
 .connections a,
-legend {
+h5 {
   font-size: 2rem;
 }
 
@@ -831,7 +831,7 @@ h4 {
           align-items: 0;
 }
 
-.follow p {
+.follow li:first-of-type {
   padding-right: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -869,32 +869,32 @@ h4 {
   color: #FFF;
 }
 
-.socials li:first-of-type a,
-.socials li:nth-of-type(2) a {
+.socials li:nth-of-type(2) a,
+.socials li:nth-of-type(3) a {
   margin-right: 10px;
 }
 
-.socials li:nth-of-type(1) a:hover, .socials li:nth-of-type(1) a:focus {
+.socials li:nth-of-type(2) a:hover, .socials li:nth-of-type(2) a:focus {
   background: #2867b2;
   border: 2px solid #2867b2;
 }
 
-.socials li:nth-of-type(2) a:hover, .socials li:nth-of-type(2) a:focus {
+.socials li:nth-of-type(3) a:hover, .socials li:nth-of-type(3) a:focus {
   background: #211F1F;
   border: 2px solid #211F1F;
 }
 
-.socials li:nth-of-type(3) a:hover, .socials li:nth-of-type(3) a:focus {
+.socials li:nth-of-type(4) a:hover, .socials li:nth-of-type(4) a:focus {
   background: #1DA1F2;
   border: 2px solid #1DA1F2;
 }
 
-form legend,
-.socials li {
+form h5,
+.socials li:not(.socialsTitle) {
   text-align: center;
 }
 
-.legendMobile {
+.formTitleMobile {
   display: none;
 }
 
@@ -914,7 +914,7 @@ form {
           align-items: 0;
 }
 
-form legend {
+form h5 {
   max-width: 500px;
   padding-bottom: 10px;
   display: block;
@@ -1031,7 +1031,7 @@ span.avoidWrap {
     margin: 0;
   }
   form,
-  legend {
+  h5 {
     max-width: 400px;
   }
 }
@@ -1077,7 +1077,7 @@ span.avoidWrap {
         align-self: center;
   }
   form,
-  legend {
+  h5 {
     max-width: 500px;
   }
 }
@@ -1346,16 +1346,16 @@ span.avoidWrap {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .socials p {
+  .socials li:first-of-type {
     display: none;
   }
-  .legendDesktop {
+  .formTitleDesktop {
     display: none;
   }
-  .legendMobile {
+  .formTitleMobile {
     display: inline;
   }
-  legend {
+  h5 {
     font-size: 2rem;
   }
   button,

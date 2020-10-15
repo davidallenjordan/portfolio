@@ -37,7 +37,7 @@
     // Contact -->
     
     form,
-    legend {
+    h5 {
       max-width: 400px;
   }
 }
@@ -96,7 +96,7 @@
   }
 
   form,
-  legend {
+  h5 {
     max-width: 500px;
   }
 }
@@ -277,7 +277,7 @@
 
   // Main --->
 
-    main {
+  main {
     background-size: 100%, 101%, 105%, 105%;
     background-position: 100%, 100% 16%, -523% 74%, 359% 87%;
   }
@@ -452,19 +452,19 @@
     justify-content: center;
   }
 
-  .socials p {
-      display: none;
-  }
-
-  .legendDesktop {
+  .socials li:first-of-type {
     display: none;
   }
 
-  .legendMobile {
+  .formTitleDesktop {
+    display: none;
+  }
+
+  .formTitleMobile {
     display: inline;
   }
 
-  legend {
+  h5 {
     font-size: 2rem;
   }
 
